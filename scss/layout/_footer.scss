@@ -1,0 +1,157 @@
+
+.bottom
+{
+  background-color: $wht;
+  padding: 0 0 15px;
+  position: relative;
+  @include respond-to(medium-tablet)
+  {
+    height: auto;
+  }
+  .container
+  {
+    padding: 0;
+    width: 950px;
+    @include respond-to(medium-tablet)
+    {
+      width: auto;
+    }
+  }
+
+  .footer-column
+  {
+    float: left;
+    width: 88%;
+
+    @include respond-to(medium-tablet)
+    {
+      width: 100%;
+    }
+
+  }
+
+}
+
+.logo-footer
+{
+  margin: 21px 0 0;
+  float: left;
+  width: 12%;
+  padding-left: 0;
+  img
+  {
+    max-width: 95px;
+  }
+  @include respond-to(medium-tablet)
+  {
+    display: none;
+  }
+}
+
+.nav-footer
+{
+  width: 88%;
+  height: 30px;
+  margin: 20px 0 0;
+  float: right;
+
+  @include respond-to(medium-tablet)
+  {
+    display: none;
+  }
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: table;
+    width: 100%;
+    li{
+      display: table-cell;
+      text-align: center;
+      font-size: 13px;
+      position: relative;
+
+      &:before{
+        left: 0;
+        top: 0;
+        background: url("../images/line_navigation.png") no-repeat 0 0;
+        @include size(11px, 19px);
+        position: absolute;
+        content: "";
+      }
+
+      &:first-child{
+        &:before{
+          background: none;
+        }
+      }
+
+      a{
+        font-family: 'Conv_TA Encorpada VN-Regular';
+        color: $blk;
+        padding: 0 0 0 10px;
+      }
+    }
+  }
+}
+
+.footer-widget
+{
+
+  @include make-xs-column(6);
+  @include make-sm-column(4);
+  @include make-md-column(4);
+  @include make-lg-column(4);
+  font-family: arial, helvetica, clean, sans-serif;
+  @include respond-to(large-phone)
+  {
+    @include make-xs-column(12);
+    padding-left: 27px;
+  }
+
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: -1px;
+
+
+
+  background: url("../images/icon-point.png") no-repeat 0 12px;
+  background-size: 20px;
+  padding-left: 27px;
+  padding-right: 0;
+  word-wrap: break-word;
+  color: #acacac;
+
+
+
+  h3{
+    font-size: 14px;
+    line-height: 120%;
+    margin: 10px 0 20px;
+    font-family: 'ta_brix_slab_medium_vnregular';
+    padding: 0 2px 0 0;
+  }
+  p{
+    font-size: 13px;
+  }
+}
+
+.footer
+{
+  background-color: $wht;
+}
+
+.copyright
+{
+  border-top: 1px solid #a9a9a9;
+  padding: 15px 0 0;
+  margin: 7px 0 0;
+  color: #acacac;
+  p{
+    text-align: center;
+    font-family: arial, helvetica, clean, sans-serif;
+  }
+}
+
