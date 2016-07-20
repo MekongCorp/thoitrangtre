@@ -1,0 +1,448 @@
+
+.header
+{
+  min-height: 90px;
+  -webkit-box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
+  -moz-box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
+  box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
+  position: relative;
+  z-index: 500;
+}
+
+.logo{
+  float: left;
+  margin: 15px 0 0;
+
+  @include respond-to(767)
+  {
+    float: none;
+    margin: 20px auto 12px;
+    display: inline-block;
+  }
+}
+
+.box-collection{
+  font-family: 'Conv_futura_medium_bt-webfont';
+  color: $red;
+  font-size: 38px;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 0 0 30px;
+  margin: 20px 0 0 30px;
+  border-left: 1px solid $grey;
+}
+
+.header-right
+{
+  float: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: table;
+  height: 90px;
+  li{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-right: 1px dashed #b2b2b2;
+    padding: 0 30px;
+    &.share-social
+    {
+      h3{
+        color: #232323;
+        font-size: 10px;
+        font-family: 'Conv_futura_medium_bt-webfont';
+        margin: 0 0 3px;
+      }
+      .social{
+        img{
+          margin: 0 1px;
+        }
+      }
+    }
+    &.search{
+      &.active{
+        background-color: $wht;
+        position: relative;
+        z-index: 100;
+      }
+      a{
+        font-size: 25px;
+        color: $red;
+      }
+    }
+
+  }
+}
+
+
+.toggleBox
+{
+
+  background:none;
+  overflow: hidden;
+  float: left;
+  height: 35px;
+  position: relative;
+  width: 30px;
+  @include border-radius(5px);
+  @include respond-to(1199)
+  {
+    display: inline-block;
+  }
+  .navToggle {
+    background: none;
+    border: medium none;
+    border-radius: 0;
+    cursor: pointer;
+    height: 35px;
+    left: 0;
+    outline: medium none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 200;
+
+    .nav-icon {
+      background-color: $red;
+      border-radius: 0;
+      display: block;
+      height: 5px;
+      left: 0;
+      margin-top: -1px;
+      position: relative;
+      top: 0;
+      @include border-radius(5px);
+
+      @include transition(background 0.3s ease 0.2s);
+      width: 30px;
+
+      &:before, &:after
+      {
+        background-color: $red;
+        @include border-radius(5px);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        -webkit-transition:  top 0.3s ease 0.2s, transform 0.3s ease 0s;;
+        -moz-transition: 0.3s ease 0.2s, transform 0.3s ease 0s;
+        transition: top 0.3s ease 0.2s, transform 0.3s ease 0s;
+        @include transform-origin(50% 50% 0);
+        width: 100%;
+      }
+
+      &:before{
+        top: -9px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform:  rotate(0deg);
+      }
+
+      &:after
+      {
+        top: 9px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform:  rotate(0deg);
+      }
+    }
+
+    &.open{
+      .nav-icon{
+        background-color: $wht;
+        &:before{
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          top: 0;
+        }
+
+        &:after
+        {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          top: 0;
+        }
+
+      }
+    }
+  }
+}
+
+.search-top
+{
+  width: 100%;
+  border-top: 1px solid #bcbcbc;
+  border-bottom: 1px solid #d1d1d1;
+  background: $wht;
+  -webkit-box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
+  -moz-box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
+  box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
+  height: 69px;
+  position: absolute;
+  top: 89px;
+  display: none;
+  &.active{
+    display: block;
+  }
+  .keyword
+  {
+    width: 100%;
+    height: 67px;
+    border: none;
+    font-family: 'ta_brix_slab_medium_vnregular';
+    color: #0d0d0d;
+    font-size: 16px;
+  }
+}
+
+.search-suggest
+{
+  width: 100%;
+  background-color: $wht;
+  height: 350px;
+  position: absolute;
+  top: 170px;
+  z-index: 10;
+  display: none;
+  .search-column
+  {
+    font-size: 16px;
+    padding: 0;
+    list-style-type: none;
+    h3{
+      color: #5b5b5b;
+      font-weight: normal;
+      font-size: 16px;
+    }
+    .info{
+      color: #0d0d0d;
+      font-size: 16px;
+      span.note{
+        color: $red;
+      }
+      @include link-color(#0d0d0d, #0d0d0d);
+    }
+  }
+  &.active{
+    display: block;
+  }
+}
+
+.navigation-top
+{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+.nav-top
+{
+  >ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: table;
+    width: 100%;
+    position: relative;
+    >li{
+      display: table-cell;
+      height: 46px;
+      @include link-color($wht,$violet,"");
+      &.active
+      {
+        >a{
+          color: $violet;
+
+        }
+
+      }
+
+      >a{
+        >span{
+          display: none;
+        }
+
+        z-index: 10;
+        display: block;
+        text-align: center;
+        padding: 0 10px 0 23px;
+        position: relative;
+        margin: 7px 0 0;
+        height: auto;
+        line-height: normal;
+        padding: 10px;
+
+        @include link-color($blk,$violet,"");
+        text-align: left;
+        >span{
+          display: block;;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 30px;
+          }
+
+      }
+
+      &:first-child{
+        a{
+          &:before{
+            background: none;
+          }
+        }
+
+        >a{
+          padding: 0 15px 0 0;
+
+          &:after{
+            left: 12%;
+          }
+        }
+
+        img{
+          width: 40px;
+        }
+      }
+
+
+        border-left: none;
+        width: 100%;
+        height: auto;
+        display: block;
+        border-top: 1px solid $grey1;
+        @include link-color($blk,$violet,"");
+        position: relative;
+        &:first-child{
+          border-top: none;
+          padding: 10px;
+        }
+
+        &.has-sub{
+
+          &.active{
+            .nav-sub{
+              display: block;
+            }
+          }
+
+          &:after{
+            clear: both;
+            display: block;
+            position: absolute;
+            content: "\e258";
+            font-family: 'Glyphicons Halflings';
+            top: 10px;
+            right: 8px;
+          }
+
+          &.active:after{
+            clear: both;
+            display: block;
+            position: absolute;
+            content: "\e259";
+            font-family: 'Glyphicons Halflings';
+            top: 10px;
+            right: 8px;
+          }
+        }
+
+    }
+  }
+  .nav-sub
+  {
+
+    width: 100%;
+    left: 0;
+    background: url("../images/bg_nav_sub.jpg") no-repeat bottom center;
+    background-color: $wht;
+    display: none;
+    z-index: 50;
+    @include transition(all 0.3s ease-out);
+    text-align: center;
+    position: relative;
+    height: auto;
+    top: 0;
+    background: none;
+    background-color: $wht;
+    text-align: left;
+    @include transition(none);
+
+
+    >ul{
+      padding: 25px 0 0;
+      list-style-type: none;
+      width: auto;
+      display: inline-block;
+      margin: 0 auto;
+
+      &:after{
+        display: block;
+        content: "";
+        clear: both;
+      }
+
+      >li{
+
+
+        text-align: left;
+        padding: 0 25px 0 20px;
+        float: left;
+        font-family: 'ta_brix_slab_light_vnregular';
+
+        &:first-child{
+          border-left: none;
+        }
+
+        >h3{
+          margin: 7px 0 10px;
+          font-family: 'ta_brix_slab_light_vnregular';
+          color: #404040;
+          font-size: 14px;
+            display: none;
+
+        }
+
+        @include link-color(#404040,$violet,"");
+
+        float: none;
+        width: 100%;
+        border-left: none;
+        padding-bottom: 0;
+        >a{
+          width: 100%;
+          position: relative;
+          display: block;
+          >span{
+            display: block;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+          }
+        }
+
+        >a{
+          span{
+            display: none;
+          }
+        }
+      }
+
+        padding: 0 0 7px;
+        width: 100%;
+
+
+    }
+  }
+
+}

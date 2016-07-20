@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <!--[if lt IE 9]>
+    <script language="javascript" type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+        document.createElement('hgroup');
+    </script>
+
+    <![endif]-->
+
+    <script type="text/javascript" src="libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript" src="libs/jquery-1.11.2.min.js"></script>
+
+</head>
+<body>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h1 class="logo"><a href="javascript:void(0);"><img src="images/logo.png" alt="Thời Trang Trẻ"></a></h1>
+                        <div class="box-collection">
+                            BỘ SƯU TẬP
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="header-right">
+                            <li class="share-social">
+                                <h3>FOLLOW US ON</h3>
+                                <div class="social">
+                                    <a href="javascript:void(0);"><img src="images/icon_facebook.png" alt="Facebook"></a>
+                                    <a href="javascript:void(0);"><img src="images/icon_instagram.png" alt="Instagram"></a>
+                                    <a href="javascript:void(0);"><img src="images/icon_printerest.png" alt="Printerest"></a>
+                                </div>
+                            </li>
+                            <li class="search active">
+                                <a href="javascript:void(0);"><i class="glyphicon glyphicon-search"></i></a>
+                            </li>
+                            <li class="show-menu">
+                                <div class="toggleBox "><button class="navToggle"><span class="nav-icon"></span></button></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-top">
+                <div class="container">
+                    <input type="text" placeholder="Tìm kiếm" class="keyword" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="search-suggest">
+                <div class="container">
+                    <div class="row">
+                        <ul class="search-column">
+                            <li class="col-sm-3">
+                                <h3>Designer (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                                <h3>Mark Up Artist (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                            </li>
+                            <li class="col-sm-3">
+                                <h3>Designer (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                                <h3>Mark Up Artist (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                            </li>
+                            <li class="col-sm-3">
+                                <h3>Designer (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                                <h3>Mark Up Artist (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                            </li>
+                            <li class="col-sm-3">
+                                <h3>Designer (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                                <h3>Mark Up Artist (3)</h3>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Trí</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Khanh</a></div>
+                                <div class="info"><a href="javascript:void(0);"><span class="note">Nguyễn Công</span> Thành</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </header><!-- header -->
+
+        <div class="navigation-top">
+            <nav class="nav-top">
+                <ul>
+                    <li><a href="javascript:void(0);"><i class="glyphicon glyphicon-home"> </i></a></li>
+                    <li class="has-sub">
+                        <a href="javascript:void(0);">Phong cách<span></span></a>
+                        <div class="nav-sub">
+                            <ul>
+                                <li><a href="javascript:void(0);">LÀM ĐẸP</a></li>
+                                <li><a href="javascript:void(0);">THỜI TRANG</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-sub">
+                        <a href="/song-khoe">SỐNG KHỎE<span></span></a>
+                        <div class="nav-sub" style="">
+                            <ul>
+                                <li><a href="/song-khoe/dac-quyen-phai-dep">ĐẶC QUYỀN PHÁI ĐẸP</a></li>
+                                <li><a href="/song-khoe/dinh-duong">DINH DƯỠNG</a></li>
+                                <li><a href="/song-khoe/dai-lo-nhan-sac">ĐẠI LỘ NHAN SẮC</a></li>
+                                <li><a href="/song-khoe/suc-khoe">SỨC KHỎE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="has-sub"><a href="javascript:void(0);">CHÂN DUNG<span></span></a><div class="nav-sub" style=""><ul><li class="item-161"><a href="/chan-dung/showbiz">SHOWBIZ</a></li><li class="item-162"><a href="/chan-dung/sao-quoc-te">SAO QUỐC TẾ</a></li><li class="item-163"><a href="/chan-dung/tro-chuyen-cung-sao">TRÒ CHUYỆN CÙNG SAO</a></li></ul></div></li>
+                </ul>
+            </nav>
+        </div> <!-- navigation top -->
+
+        <section class="site-content">
+            <div class="box-filter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 column">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a href="#">BST quốc tế</a></li>
+                                    <li><a href="#">BST quốc tế</a></li>
+                                    <li><a href="#">BST Việt nam</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 column">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Thời gian
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a href="#">12:00</a></li>
+                                    <li><a href="#">13:00</a></li>
+                                    <li><a href="#">BST Việt nam</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 column">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Style
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li><a href="#">BST quốc tế</a></li>
+                                    <li><a href="#">BST quốc tế</a></li>
+                                    <li><a href="#">BST Việt nam</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 column">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle btn-filter" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Style
+                                    <span class="caret"></span>
+                                </button>
+
+                                <div class="dropdown-menu designer" aria-labelledby="dropdownMenu2">
+                                    <div class="filter-scrollbar">
+                                        <h3 id="A">A</h3>
+                                        <ul>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+
+                                        <h3 id="B">B</h3>
+                                        <ul>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+
+                                        <h3 id="C">C</h3>
+                                        <ul>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST quốc tế</a></li>
+                                            <li><a href="#">BST Việt nam</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="scroll-to">
+                                        <a href="#A">A</a>
+                                        <a href="#B">B</a>
+                                        <a href="#C">C</a>
+                                        <a href="#D">D</a>
+                                        <a href="#E">E</a>
+                                        <a href="#F">F</a>
+                                        <a href="#G">G</a>
+                                        <a href="#H">H</a>
+                                        <a href="#I">I</a>
+                                        <a href="#J">J</a>
+                                        <a href="#K">K</a>
+                                        <a href="#L">L</a>
+                                        <a href="#M">M</a>
+                                        <a href="#N">N</a>
+                                        <a href="#O">O</a>
+                                        <a href="#P">P</a>
+                                        <a href="#Q">Q</a>
+                                        <a href="#R">R</a>
+                                        <a href="#S">S</a>
+                                        <a href="#T">T</a>
+                                        <a href="#U">U</a>
+                                        <a href="#V">V</a>
+                                        <a href="#W">W</a>
+                                        <a href="#X">X</a>
+                                        <a href="#Y">Y</a>
+                                        <a href="#Z">Z</a>
+                                        <a href="#">#</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- filter -->
+
+
+                <div class="banner-home">
+                    <div class="container banner-navigation">
+
+                    </div>
+                    <div class="carousel-style carousel-home">
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div> <!-- item -->
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div><!-- item -->
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div><!-- item -->
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div><!-- item -->
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div><!-- item -->
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div><!-- item -->
+                        <div class="item">
+                            <div class="thumbnail ttt-thumbnail">
+                                <img src="upload/thumb-gallery/thumb-bannerhome-1.jpg" alt="">
+                            </div>
+                            <div class="caption ttt-caption">
+                                <h3><a href="javascript:void(0);">Thom Browne</a></h3>
+                            </div>
+                        </div><!-- item -->
+                    </div> <!-- bannner -->
+                </div>
+
+            <div class="container">
+                <div class="widget-title">
+                    <h3>VIETNAM FASHION WEEK</h3>
+                    <h2>ALL SEASON</h2>
+                    <div class="date">Thứ 5, 20/07/2016</div>
+                </div>
+
+                <div class="description-content">
+                    <p>
+                        Cras placerat ligula diam, eget porta odio faucibus ut. Nunc at fermentum libero, quis maximus sem. Quisque vestibulum neque sodales, condimentum libero porta, interdum nisl.
+                    </p>
+                    <p>
+                        <a href="javascript:void(0);" class="read-more">Read more</a>
+                    </p>
+                </div>
+                <div class="line"></div>
+
+            </div>
+
+            <div class="box-designer">
+                <div class="widget-title">
+                    <h3>VIETNAM FASHION WEEK</h3>
+                    <h2>AUTUMN 2017 READY TO WEAR</h2>
+                    <div class="date">Thứ 5, 20/07/2016</div>
+                </div>
+
+                <div class="wrapper-list-designer">
+
+                    <div class="box-filter">
+                        <div class="dropdown">
+                            <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-default dropdown-toggle btn-filter">
+                                Action
+                                <span class="caret"></span>
+                            </button>
+                            <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
+                                <li><a href="#">BST quốc tế</a></li>
+                                <li><a href="#">BST quốc tế</a></li>
+                                <li><a href="#">BST Việt nam</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="list-designer">
+                        <div class="title">
+                            <h3><span>Danh sách</span> <br> NHÀ THIẾT KẾ</h3>
+                        </div>
+                        <div class="content-list-designer">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Thom Browne</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Paul Smith</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Undercover</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Takahiromiyashita The Soloistsa</a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0);">Officine Generale</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Lanvin</a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="wrapper-slider-designer">
+                        <div class="slider-designer">
+                            <div class="carousel-style carousel-style-4">
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div> <!-- list designer -->
+
+                <div class="widget-title">
+                    <h3>VIETNAM FASHION WEEK</h3>
+                    <h2>AUTUMN 2017 READY TO WEAR</h2>
+                    <div class="date">Thứ 5, 20/07/2016</div>
+                </div>
+
+                <div class="wrapper-list-designer">
+
+                    <div class="box-filter">
+                        <div class="dropdown">
+                            <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" class="btn btn-default dropdown-toggle btn-filter">
+                                Action
+                                <span class="caret"></span>
+                            </button>
+                            <ul aria-labelledby="dropdownMenu2" class="dropdown-menu">
+                                <li><a href="#">BST quốc tế</a></li>
+                                <li><a href="#">BST quốc tế</a></li>
+                                <li><a href="#">BST Việt nam</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-designer">
+                        <div class="title">
+                            <h3><span>Danh sách</span> <br> NHÀ THIẾT KẾ</h3>
+                        </div>
+                        <div class="content-list-designer">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Thom Browne</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Paul Smith</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Undercover</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Takahiromiyashita The Soloistsa</a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0);">Officine Generale</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Lanvin</a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Off-white</a>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="wrapper-slider-designer">
+                        <div class="slider-designer">
+                            <div class="carousel-style carousel-style-4">
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                                <div class="item">
+                                    <div class="thumbnail ttt-thumbnail">
+                                        <a href="javascript:void(0);"><img src="upload/thumb-gallery/thumb-collection-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="caption ttt-caption">
+                                        <h3>
+                                            <a href="javascript:void(0);">Thom Browne</a>
+                                        </h3>
+                                    </div>
+                                </div> <!-- item -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div> <!-- list designer -->
+            </div>
+
+        </section>
+
+        <section class="bottom">
+
+            <div class="container">
+
+                <div class="row">
+                    <h1 class="logo-footer"><a href="javascript:void(0);"><img alt="Thời trang trẻ" src="images/logoFooter.png"></a></h1>
+                    <nav class="nav-footer">
+                        <ul>
+
+                            <li><a href="javascript:void(0);">NÀNG CÁO VĂN PHÒNG</a></li>
+                            <li><a href="javascript:void(0);">NỘI TƯỚNG</a></li>
+                            <li><a href="javascript:void(0);">GIẢI TRÍ TUẦN NÀY</a></li>
+                            <li><a href="javascript:void(0);">THỜI TRANG</a></li>
+                            <li><a href="javascript:void(0);">CUỘC THI ẢNH</a></li>
+                            <li><a href="javascript:void(0);">LÀM ĐẸP</a></li>
+                            <li><a href="javascript:void(0);">VIDEO</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-column">
+
+
+
+                        <div class="footer-widget">
+                            <h3>SỐ 1 ĐƯỜNG 14A KHU ĐÔ THỊ MỚI VĨNH LỘC, P. BÌNH HƯNG HÒA B, Q. BÌNH TÂN, TPHCM</h3>
+                            <p>Tel: (84-8) 5425 5557 &ndash; (84-8) 5425 5558, (84-8) 5425 5588<br>
+                                Fax. (84-8) 5425 5559<br>
+                                Phòng kinh doanh: (84-8) 5425 3545<br>
+                                Phòng phát hành: (84-8) 5425 5588<br>
+                                Email: toasoan@tapchithoitrangtre.com.vn<br>
+                                phathanh@tapchithoitrangtre.com.vn</p>
+                        </div>
+
+                        <div class="footer-widget">
+                            <h3>12 HỒ XUÂN HƯƠNG, HÀ NỘI</h3>
+                            <p>Tel. (84-4) 3943 0604<br>
+                                Fax. (84-4) 3943 4497<br>
+                                Email: daidienhanoi@tapchithoitrangtre.com.vn<br>
+                                Phòng kinh doanh: (84-4) 3943 0918</p>
+                        </div>
+
+                        <div class="footer-widget">
+                            <h3>259/32 NGUYỄN VĂN LINH, Q. THANH KHÊ, ĐÀ NẴNG</h3>
+                            <p> Tel. 0908 399 427 <br>
+                                Email: daidiendanang@tapchithoitrangtre.com.vn</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section> <!-- bottom -->
+
+        <div class="footer">
+            <div class="container">
+                <div class="row copyright">
+                    <p>&copy; Copyright 2009 Thoi Trang Tre, All right reserved<br>
+                        &reg; Thoi Trang Tre giữ bản quyền nội dung trên website này</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="libs/owl.carousel.js"></script>
+    <script type="text/javascript" src="libs/jquery.validate.js"></script>
+    <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
