@@ -305,10 +305,14 @@ thoitrangtre.event=(function($){
        (function ($) {
            $(document).ready(function(){
                $("body").not($(".search-suggest")).click(function(){
-                   $(".search-suggest").removeClass("active");
+                   $(".search-suggest").slideUp(function(){
+                       $(this).removeClass("active");
+                   });
                });
                $("body").not($(".keyword")).click(function(){
-                   $(".search-top").removeClass("active");
+                   $(".search-top").slideUp(function(){
+                       $(this).removeClass("active");
+                   });
                    $(".search ").removeClass("active");
                });
 
@@ -365,7 +369,6 @@ thoitrangtre.event=(function($){
 
                     $(".box-carousel .slider").not(":eq("+ index +")").removeClass("active");
                     $(".box-carousel .slider:eq("+ index +")").addClass("active");
-
                 });
 
 
@@ -391,10 +394,11 @@ thoitrangtre.event=(function($){
     var func_search=function(e){
         (function ($) {
             $(document).ready(function(){
-
                 $(".header").on("click",".keyword", function(event){
                     event.stopPropagation();
-                    $(".search-suggest").addClass("active");
+                    $(".search-suggest").slideDown(function(){
+                        $(this).addClass("active");
+                    });
                 });
 
                 $(".header").on("click",".search a", function(event){
@@ -404,11 +408,15 @@ thoitrangtre.event=(function($){
                     if($(parent).hasClass("active"))
                     {
                         $(parent).removeClass("active");
-                        $(".search-top").removeClass("active");
+                        $(".search-top").slideUp(function(){
+                            $(this).removeClass("active");
+                        });
                     }
                     else{
                         $(parent).addClass("active");
-                        $(".search-top").addClass("active");
+                        $(".search-top").slideDown(function(){
+                            $(this).addClass("active");
+                        });
                     }
                 });
 
