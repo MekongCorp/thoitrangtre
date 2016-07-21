@@ -256,6 +256,10 @@
 .wrapper-thumb-carousel
 {
   padding-right: 0;
+  @include respond-to(small-tablet)
+  {
+    display: none;
+  }
 }
 
 .thumb-carousel, .carousel
@@ -381,6 +385,14 @@
   }
 }
 
+.box-carousel
+{
+  @include respond-to(small-tablet)
+  {
+    margin: 0 0 25px;
+  }
+}
+
 
 .carousel-1
 {
@@ -389,6 +401,12 @@
 .carousel-2
 {
   position: relative;
+  li{
+    img{
+      width: 100%;
+    }
+  }
+
 }
 .slider-2
 {
@@ -938,9 +956,11 @@
       height: 100%;
       position: relative;
     }
-    @include respond-to(medium-tablet)
+    @include respond-to(small-tablet)
     {
       width: 100%;
+      display: block;
+      padding-left: 0;
     }
   }
 
@@ -951,6 +971,10 @@
     width: 20%;
     position: relative;
     display: table-cell;
+    @include respond-to(small-tablet)
+    {
+      display: none;
+    }
   }
   .list-designer
   {
@@ -974,10 +998,7 @@
         font-size: 14px;
       }
     }
-    @include respond-to(medium-tablet)
-    {
-      display: none;
-    }
+
   }
 
 
@@ -997,8 +1018,11 @@
         line-height: 33px;
       }
     }
-    @include respond-to(767)
-    {
+  }
+  @include respond-to(small-tablet)
+  {
+    display: block;
+    .box-filter{
       display: block;
     }
   }
