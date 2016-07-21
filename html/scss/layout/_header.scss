@@ -208,9 +208,12 @@
   background-color: $wht;
   height: 350px;
   position: absolute;
-  top: 170px;
+  top: 157px;
   z-index: 10;
   display: none;
+  -webkit-box-shadow: inset 0px 5px 14px 0px rgba(197,197,197,1);
+  -moz-box-shadow: inset 0px 5px 14px 0px rgba(197,197,197,1);
+  box-shadow: inset 0px 5px 14px 0px rgba(197,197,197,1);
   .search-column
   {
     font-size: 16px;

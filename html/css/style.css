@@ -12401,9 +12401,12 @@ yx-axis
   background-color: #fff;
   height: 350px;
   position: absolute;
-  top: 170px;
+  top: 157px;
   z-index: 10;
-  display: none; }
+  display: none;
+  -webkit-box-shadow: inset 0px 5px 14px 0px #c5c5c5;
+  -moz-box-shadow: inset 0px 5px 14px 0px #c5c5c5;
+  box-shadow: inset 0px 5px 14px 0px #c5c5c5; }
   .search-suggest .search-column {
     font-size: 16px;
     padding: 0;
@@ -12823,7 +12826,8 @@ yx-axis
   min-height: 60px;
   width: 100%;
   background-color: #d6d6d6;
-  margin: 0 0 15px; }
+  margin: 0 0 15px;
+  padding: 0 0 15px; }
   .box-filter .dropdown {
     margin: 13px 0 0;
     color: #9a9a9a;
