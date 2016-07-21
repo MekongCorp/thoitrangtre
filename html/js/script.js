@@ -198,8 +198,8 @@ thoitrangtre.Slider=(function($){
                 $(".list-category-1").mCustomScrollbar();
 
                 var up=50, down=50;
-                $(".thumb-slider-1 a").click(function(){
-
+                $(".thumb-slider-1 a").click(function(event){
+                    event.preventDefault();
                     var to=$(this).attr("href").split(/#(.+)/)[1];
                     $(".list-category-1").mCustomScrollbar("scrollTo", to);
 
