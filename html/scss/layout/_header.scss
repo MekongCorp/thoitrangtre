@@ -7,13 +7,17 @@
   box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
   position: relative;
   z-index: 500;
+  @include respond-to(small-tablet)
+  {
+    text-align: center;
+  }
 }
 
 .logo{
   float: left;
   margin: 15px 0 0;
 
-  @include respond-to(767)
+  @include respond-to(small-tablet)
   {
     float: none;
     margin: 20px auto 12px;
@@ -31,6 +35,11 @@
   padding: 0 0 0 30px;
   margin: 20px 0 0 30px;
   border-left: 1px solid $grey;
+  @include respond-to(small-tablet)
+  {
+    float: none;
+    display: inline-block;
+  }
 }
 
 .header-right
@@ -72,14 +81,16 @@
         color: $red;
       }
     }
-
+  }
+  @include respond-to(small-tablet)
+  {
+    float: none;
+    margin: 0 auto;
   }
 }
 
-
 .toggleBox
 {
-
   background:none;
   overflow: hidden;
   float: left;
@@ -186,7 +197,7 @@
   box-shadow: 0px 6px 2px -2px rgba(197,197,197,1);
   height: 69px;
   position: absolute;
-  top: 89px;
+  margin-top: -1px;
   display: none;
   &.active{
     display: block;
@@ -199,6 +210,10 @@
     font-family: 'ta_brix_slab_medium_vnregular';
     color: #0d0d0d;
     font-size: 16px;
+  }
+  @include respond-to(small-tablet)
+  {
+    position: relative;
   }
 }
 
@@ -235,6 +250,12 @@
   }
   &.active{
     display: block;
+  }
+  @include respond-to(small-tablet)
+  {
+    position: relative;
+    top: 0;
+    height: auto;
   }
 }
 

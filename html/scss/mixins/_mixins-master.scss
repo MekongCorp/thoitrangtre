@@ -1,6 +1,7 @@
 $screen-smd-max: 600px;
 $screen-sd-max: 480px;
 $screen-extra-min: 1400px;
+$screen-small-tablet: 768px;
 
 @function font-url($path)
 {
@@ -60,6 +61,9 @@ $screen-extra-min: 1400px;
 
   @else if $media == medium-tablet {
     @media (max-width: $screen-md-min - 1 ) {@content; }
+  }
+  @else if $media == small-tablet {
+    @media (max-width: $screen-small-tablet - 1 ) {@content; }
   }
 
     /* Portrait tablet to landscape and desktop 768-979 */

@@ -12234,13 +12234,17 @@ yx-axis
   -moz-box-shadow: 0px 6px 2px -2px #c5c5c5;
   box-shadow: 0px 6px 2px -2px #c5c5c5;
   position: relative;
-  z-index: 500; }
+  z-index: 500;
+  /* Landscape phones and down */ }
+  @media (max-width: 767px) {
+    .header {
+      text-align: center; } }
 
 .logo {
   float: left;
   margin: 15px 0 0;
   /* Landscape phones and down */ }
-  @media only screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     .logo {
       float: none;
       margin: 20px auto 12px;
@@ -12255,7 +12259,12 @@ yx-axis
   line-height: 50px;
   padding: 0 0 0 30px;
   margin: 20px 0 0 30px;
-  border-left: 1px solid #e5e5e5; }
+  border-left: 1px solid #e5e5e5;
+  /* Landscape phones and down */ }
+  @media (max-width: 767px) {
+    .box-collection {
+      float: none;
+      display: inline-block; } }
 
 .header-right {
   float: right;
@@ -12263,7 +12272,8 @@ yx-axis
   padding: 0;
   margin: 0;
   display: table;
-  height: 90px; }
+  height: 90px;
+  /* Landscape phones and down */ }
   .header-right li {
     display: table-cell;
     vertical-align: middle;
@@ -12284,6 +12294,10 @@ yx-axis
     .header-right li.search a {
       font-size: 25px;
       color: #e31f26; }
+  @media (max-width: 767px) {
+    .header-right {
+      float: none;
+      margin: 0 auto; } }
 
 .toggleBox {
   background: none;
@@ -12384,8 +12398,9 @@ yx-axis
   box-shadow: 0px 6px 2px -2px #c5c5c5;
   height: 69px;
   position: absolute;
-  top: 89px;
-  display: none; }
+  margin-top: -1px;
+  display: none;
+  /* Landscape phones and down */ }
   .search-top.active {
     display: block; }
   .search-top .keyword {
@@ -12395,6 +12410,9 @@ yx-axis
     font-family: 'ta_brix_slab_medium_vnregular';
     color: #0d0d0d;
     font-size: 16px; }
+  @media (max-width: 767px) {
+    .search-top {
+      position: relative; } }
 
 .search-suggest {
   width: 100%;
@@ -12406,7 +12424,8 @@ yx-axis
   display: none;
   -webkit-box-shadow: inset 0px 5px 14px 0px #c5c5c5;
   -moz-box-shadow: inset 0px 5px 14px 0px #c5c5c5;
-  box-shadow: inset 0px 5px 14px 0px #c5c5c5; }
+  box-shadow: inset 0px 5px 14px 0px #c5c5c5;
+  /* Landscape phones and down */ }
   .search-suggest .search-column {
     font-size: 16px;
     padding: 0;
@@ -12428,6 +12447,11 @@ yx-axis
         color: #0d0d0d; }
   .search-suggest.active {
     display: block; }
+  @media (max-width: 767px) {
+    .search-suggest {
+      position: relative;
+      top: 0;
+      height: auto; } }
 
 .navigation-top {
   display: none; }
@@ -12823,11 +12847,12 @@ yx-axis
   border-bottom: 1px dotted #000; }
 
 .box-filter {
-  min-height: 60px;
+  height: 60px;
   width: 100%;
   background-color: #d6d6d6;
   margin: 0 0 15px;
-  padding: 0 0 15px; }
+  padding: 0 0 15px;
+  /* Landscape phones and down */ }
   .box-filter .dropdown {
     margin: 13px 0 0;
     color: #9a9a9a;
@@ -12861,7 +12886,11 @@ yx-axis
       .box-filter .dropdown .dropdown-menu.designer {
         width: calc(200% + 30px);
         right: 0;
-        left: auto; }
+        left: auto;
+        /* Landscape phones and down */ }
+        @media (max-width: 767px) {
+          .box-filter .dropdown .dropdown-menu.designer {
+            width: 100%; } }
     .box-filter .dropdown .mCSB_dragger_bar {
       background: none !important; }
     .box-filter .dropdown .mCSB_draggerRail {
@@ -12886,9 +12915,13 @@ yx-axis
         z-index: 1100;
         position: relative;
         background-color: #fff;
-        color: #000; }
+        color: #000;
+        /* Landscape phones and down */ }
         .box-filter .dropdown.open .btn-filter:focus, .box-filter .dropdown.open .btn-filter:hover, .box-filter .dropdown.open .btn-filter:active .box-filter .dropdown.open .btn-filter.active {
           background-color: #fff !important; }
+        @media (max-width: 767px) {
+          .box-filter .dropdown.open .btn-filter {
+            height: 33px; } }
       .box-filter .dropdown.open .caret {
         top: 14px; }
   .box-filter .btn-filter:focus, .box-filter .btn-filter:hover, .box-filter .btn-filter:active .box-filter .btn-filter.active, .box-filter .btn-default:focus, .box-filter .btn-default:hover, .box-filter .btn-default:active .box-filter .btn-filter.active, .box-filter .btn-filter:active .box-filter .btn-default.active, .box-filter .btn-default:active .box-filter .btn-default.active {
@@ -12901,6 +12934,9 @@ yx-axis
       text-align: center;
       color: #9a9a9a;
       font-size: 10px; }
+  @media (max-width: 767px) {
+    .box-filter {
+      height: auto; } }
 
 .box-slider {
   padding-top: 20px;
