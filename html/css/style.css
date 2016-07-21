@@ -13497,7 +13497,9 @@ yx-axis
 .wrapper-list-designer {
   width: 100%;
   padding: 0 0 0 20px;
-  margin: 0 0 25px; }
+  margin: 0 0 25px;
+  display: table;
+  table-layout: fixed; }
   .wrapper-list-designer:before, .wrapper-list-designer:after {
     content: " ";
     display: table; }
@@ -13506,19 +13508,30 @@ yx-axis
   .wrapper-list-designer .wrapper-slider-designer {
     overflow: hidden;
     padding-left: 10px;
-    float: left;
     vertical-align: top;
-    width: 80%; }
+    width: 80%;
+    display: table-cell;
+    /* Landscape phones and down */ }
     .wrapper-list-designer .wrapper-slider-designer .slider-designer {
       width: 100%;
       overflow: hidden;
       height: 100%;
       position: relative; }
-  .wrapper-list-designer .list-designer {
-    float: left;
+    @media (max-width: 991px) {
+      .wrapper-list-designer .wrapper-slider-designer {
+        width: 100%; } }
+  .wrapper-list-designer .box-list-designer {
     vertical-align: top;
     border: 1px solid #cccccc;
-    width: 20%; }
+    width: 20%;
+    position: relative;
+    display: table-cell; }
+  .wrapper-list-designer .list-designer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* Landscape phones and down */ }
     .wrapper-list-designer .list-designer h3 {
       margin: 0;
       text-align: center;
@@ -13531,6 +13544,9 @@ yx-axis
       .wrapper-list-designer .list-designer h3 span {
         font-family: 'Conv_futura_medium_bt-webfont';
         font-size: 14px; }
+    @media (max-width: 991px) {
+      .wrapper-list-designer .list-designer {
+        display: none; } }
   .wrapper-list-designer .box-filter {
     min-height: initial;
     max-width: 250px;
@@ -13549,7 +13565,8 @@ yx-axis
         display: block; } }
 
 .content-list-designer {
-  height: 315px; }
+  height: 315px;
+  height: calc(100% - 65px); }
   .content-list-designer ul {
     list-style-type: none;
     padding: 15px 0; }
