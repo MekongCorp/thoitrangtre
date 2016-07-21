@@ -176,6 +176,8 @@ thoitrangtre.Slider=(function($){
 
                 });
 
+
+
                 $(".content-list-designer").mCustomScrollbar({ scrollbarPosition:"inside"});
 
             });
@@ -191,7 +193,20 @@ thoitrangtre.Slider=(function($){
          _slider2 =  new func_gallerySlider(".carousel-2", ".thumb-carousel-2", 4000, 0, 6,6);
         _slider2.slider.loadslider();
 
-        $(".list-category-1").mCustomScrollbar();
+        (function ($) {
+            $(document).ready(function(){
+                $(".list-category-1").mCustomScrollbar();
+
+                var up=50, down=50;
+                $(".thumb-slider-1 a").click(function(){
+
+                    var to=$(this).attr("href").split(/#(.+)/)[1];
+                    $(".list-category-1").mCustomScrollbar("scrollTo", to);
+
+                });
+
+            });
+        })(jQuery);
 
     };
 
