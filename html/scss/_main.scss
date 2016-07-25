@@ -23,10 +23,50 @@
   }
 }
 
-.ttt-caption{
+
+
+.ttt-pagination
+{
+  width: 100%;
+  text-align: center;
+  @include border-radius(0px);
+  a{
+    display: inline-block;
+    vertical-align: top;
+    background: none;
+    padding: 9px 10px;
+    font-family: 'Conv_TA Encorpada VN-Regular';
+    color: #a09b95;
+    margin: 0 2px;
+    position: relative;
+
+    &.active{
+      color: $violet;
+      background-color: $wht;
+      padding: 9px 10px;
+    }
+  }
+  span{
+    color: #a09b95;
+    padding: 9px 10px;
+    display: inline-block;  
+  }
+
+  .pre-page
+  {
+    font-size: 25px;
+    padding: 4px 10px;
+    color: $blk;
+  }
+
+  .next-page
+  {
+    font-size: 25px;
+    padding: 4px 10px;
+    color: $blk;
+  }
 
 }
-
 
 
 .button{
@@ -1137,5 +1177,62 @@
   img{
     max-width: 100%;
     margin: 0 auto;
+  }
+}
+
+.search-result
+{
+  .ttt-thumbnail
+  {
+    border: none;
+    margin: 0 0 10px;
+    img{
+      @include border-radius(0);
+    }
+  }
+  h3.title{
+    font-family: 'ta_brix_slab_medium_vnregular';
+    font-size: 16px;
+    color: #0d0d0d;
+    margin: 0 0 15px;
+  }
+  .row{
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .list-search
+  {
+    list-style-type: none;
+    padding: 0;
+    li{
+      margin-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .ttt-caption
+    {
+      text-align: center;
+      h3{
+        color: $red;
+        font-size: 12px;
+        font-family: 'Conv_futura_medium_bt-webfont';
+        margin: 0;
+        @include link-color($red, $red);
+      }
+      .name{
+        font-size: 18px;
+        color: $blk;
+        font-family: 'Conv_TA Encorpada VN-Regular';
+        margin: 0;
+        @include link-color($red, $red);
+      }
+      .year{
+        font-size: 18px;
+        color: $blk;
+        font-family: 'Conv_TA Encorpada VN-Regular';
+        margin: 0;
+        @include link-color($red, $red);
+      }
+    }
   }
 }

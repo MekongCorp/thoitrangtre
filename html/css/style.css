@@ -7791,6 +7791,60 @@ a, a:focus, a:hover, object {
 .fa-percent:before {
   content: ""; }
 
+@font-face {
+  font-family: "thoitrangtre";
+  src: url("fonts/thoitrangtre.eot");
+  src: url("fonts/thoitrangtre.eot?#iefix") format("embedded-opentype"), url("fonts/thoitrangtre.woff") format("woff"), url("fonts/thoitrangtre.ttf") format("truetype"), url("fonts/thoitrangtre.svg#thoitrangtre") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[data-icon]:before {
+  font-family: "thoitrangtre" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "thoitrangtre" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-arrow-circle-right:before {
+  content: "\65"; }
+
+.icon-mgift-icon:before {
+  content: "\66"; }
+
+.icon-mgift-icon-1:before {
+  content: "\68"; }
+
+.icon-mgift-icon-2:before {
+  content: "\69"; }
+
+.icon-mgift-icon-3:before {
+  content: "\6a"; }
+
+.icon-list:before {
+  content: "\6b"; }
+
+.icon-list-1:before {
+  content: "\67"; }
+
+.icon-arrow-circle-left:before {
+  content: "\6c"; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -12808,6 +12862,39 @@ yx-axis
     -o-border-radius: 3px;
     border-radius: 3px; }
 
+.ttt-pagination {
+  width: 100%;
+  text-align: center;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px; }
+  .ttt-pagination a {
+    display: inline-block;
+    vertical-align: top;
+    background: none;
+    padding: 9px 10px;
+    font-family: 'Conv_TA Encorpada VN-Regular';
+    color: #a09b95;
+    margin: 0 2px;
+    position: relative; }
+    .ttt-pagination a.active {
+      color: #9e2055;
+      background-color: #fff;
+      padding: 9px 10px; }
+  .ttt-pagination span {
+    color: #a09b95;
+    padding: 9px 10px;
+    display: inline-block; }
+  .ttt-pagination .pre-page {
+    font-size: 25px;
+    padding: 4px 10px;
+    color: #000; }
+  .ttt-pagination .next-page {
+    font-size: 25px;
+    padding: 4px 10px;
+    color: #000; }
+
 .button {
   background-color: #2895d5;
   font-size: 16px;
@@ -13684,5 +13771,64 @@ yx-axis
   .page-404 img {
     max-width: 100%;
     margin: 0 auto; }
+
+.search-result .ttt-thumbnail {
+  border: none;
+  margin: 0 0 10px; }
+  .search-result .ttt-thumbnail img {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0; }
+.search-result h3.title {
+  font-family: 'ta_brix_slab_medium_vnregular';
+  font-size: 16px;
+  color: #0d0d0d;
+  margin: 0 0 15px; }
+.search-result .row {
+  margin-left: -10px;
+  margin-right: -10px; }
+.search-result .list-search {
+  list-style-type: none;
+  padding: 0; }
+  .search-result .list-search li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .search-result .list-search .ttt-caption {
+    text-align: center; }
+    .search-result .list-search .ttt-caption h3 {
+      color: #e31f26;
+      font-size: 12px;
+      font-family: 'Conv_futura_medium_bt-webfont';
+      margin: 0; }
+      .search-result .list-search .ttt-caption h3 > a {
+        color: #e31f26;
+        text-decoration: none;
+        outline: none; }
+      .search-result .list-search .ttt-caption h3 > a:hover {
+        color: #e31f26; }
+    .search-result .list-search .ttt-caption .name {
+      font-size: 18px;
+      color: #000;
+      font-family: 'Conv_TA Encorpada VN-Regular';
+      margin: 0; }
+      .search-result .list-search .ttt-caption .name > a {
+        color: #e31f26;
+        text-decoration: none;
+        outline: none; }
+      .search-result .list-search .ttt-caption .name > a:hover {
+        color: #e31f26; }
+    .search-result .list-search .ttt-caption .year {
+      font-size: 18px;
+      color: #000;
+      font-family: 'Conv_TA Encorpada VN-Regular';
+      margin: 0; }
+      .search-result .list-search .ttt-caption .year > a {
+        color: #e31f26;
+        text-decoration: none;
+        outline: none; }
+      .search-result .list-search .ttt-caption .year > a:hover {
+        color: #e31f26; }
 
 /*# sourceMappingURL=style.css.map */
