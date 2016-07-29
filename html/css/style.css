@@ -13421,6 +13421,15 @@ yx-axis
     .category-2 .ttt-caption .year > a:hover {
       color: #e31f26; }
 
+.category-more {
+  text-align: center; }
+  .category-more a {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #969696;
+    color: #fff;
+    font-family: "Conv_TA Encorpada VN-Regular"; }
+
 .carousel-style {
   margin-bottom: 15px;
   position: relative; }
@@ -13772,63 +13781,63 @@ yx-axis
     max-width: 100%;
     margin: 0 auto; }
 
-.search-result .ttt-thumbnail {
+.search-result .ttt-thumbnail, .category-3 .ttt-thumbnail {
   border: none;
   margin: 0 0 10px; }
-  .search-result .ttt-thumbnail img {
+  .search-result .ttt-thumbnail img, .category-3 .ttt-thumbnail img {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -o-border-radius: 0;
     border-radius: 0; }
-.search-result h3.title {
+.search-result h3.title, .category-3 h3.title {
   font-family: 'ta_brix_slab_medium_vnregular';
   font-size: 16px;
   color: #0d0d0d;
   margin: 0 0 15px; }
-.search-result .row {
+.search-result .row, .category-3 .row {
   margin-left: -10px;
   margin-right: -10px; }
-.search-result .list-search {
+.search-result .list-search, .category-3 .list-search, .category-3 .list-category-3 {
   list-style-type: none;
   padding: 0; }
-  .search-result .list-search li {
+  .search-result .list-search li, .category-3 .list-search li, .category-3 .list-category-3 li {
     margin-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px; }
-  .search-result .list-search .ttt-caption {
+  .search-result .list-search .ttt-caption, .category-3 .list-search .ttt-caption, .category-3 .list-category-3 .ttt-caption {
     text-align: center; }
-    .search-result .list-search .ttt-caption h3 {
+    .search-result .list-search .ttt-caption h3, .category-3 .list-search .ttt-caption h3, .category-3 .list-category-3 .ttt-caption h3 {
       color: #e31f26;
       font-size: 12px;
       font-family: 'Conv_futura_medium_bt-webfont';
       margin: 0; }
-      .search-result .list-search .ttt-caption h3 > a {
+      .search-result .list-search .ttt-caption h3 > a, .category-3 .list-search .ttt-caption h3 > a, .category-3 .list-category-3 .ttt-caption h3 > a {
         color: #e31f26;
         text-decoration: none;
         outline: none; }
-      .search-result .list-search .ttt-caption h3 > a:hover {
+      .search-result .list-search .ttt-caption h3 > a:hover, .category-3 .list-search .ttt-caption h3 > a:hover, .category-3 .list-category-3 .ttt-caption h3 > a:hover {
         color: #e31f26; }
-    .search-result .list-search .ttt-caption .name {
+    .search-result .list-search .ttt-caption .name, .category-3 .list-search .ttt-caption .name, .category-3 .list-category-3 .ttt-caption .name {
       font-size: 18px;
       color: #000;
       font-family: 'Conv_TA Encorpada VN-Regular';
       margin: 0; }
-      .search-result .list-search .ttt-caption .name > a {
+      .search-result .list-search .ttt-caption .name > a, .category-3 .list-search .ttt-caption .name > a, .category-3 .list-category-3 .ttt-caption .name > a {
         color: #e31f26;
         text-decoration: none;
         outline: none; }
-      .search-result .list-search .ttt-caption .name > a:hover {
+      .search-result .list-search .ttt-caption .name > a:hover, .category-3 .list-search .ttt-caption .name > a:hover, .category-3 .list-category-3 .ttt-caption .name > a:hover {
         color: #e31f26; }
-    .search-result .list-search .ttt-caption .year {
+    .search-result .list-search .ttt-caption .year, .category-3 .list-search .ttt-caption .year, .category-3 .list-category-3 .ttt-caption .year {
       font-size: 18px;
       color: #000;
       font-family: 'Conv_TA Encorpada VN-Regular';
       margin: 0; }
-      .search-result .list-search .ttt-caption .year > a {
+      .search-result .list-search .ttt-caption .year > a, .category-3 .list-search .ttt-caption .year > a, .category-3 .list-category-3 .ttt-caption .year > a {
         color: #e31f26;
         text-decoration: none;
         outline: none; }
-      .search-result .list-search .ttt-caption .year > a:hover {
+      .search-result .list-search .ttt-caption .year > a:hover, .category-3 .list-search .ttt-caption .year > a:hover, .category-3 .list-category-3 .ttt-caption .year > a:hover {
         color: #e31f26; }
 
 /*# sourceMappingURL=style.css.map */
