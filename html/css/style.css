@@ -12994,7 +12994,7 @@ yx-axis
       .box-filter .dropdown .dropdown-menu > li > a {
         color: #9a9a9a; }
       .box-filter .dropdown .dropdown-menu.designer {
-        width: calc(200% + 30px);
+        width: 150%;
         right: 0;
         left: auto;
         /* Landscape phones and down */ }
@@ -13040,6 +13040,7 @@ yx-axis
     margin: 13px 0 0;
     padding: 6px 30px;
     border: none;
+    width: 100%;
     background-color: #e31f26;
     color: #fff; }
     .box-filter .btn-apply.btn-default {

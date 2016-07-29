@@ -187,7 +187,7 @@
 
       &.designer
       {
-        width: calc(200% + 30px);
+        width: 150%;
         right: 0;
         left: auto;
         @include respond-to(small-tablet)
@@ -256,6 +256,7 @@
     margin: 13px 0 0;
     padding: 6px 30px;
     border: none;
+    width: 100%;
     &.btn-default{
       background-color: $red;
       color: $wht;
