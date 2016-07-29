@@ -12305,7 +12305,7 @@ yx-axis
       display: inline-block; } }
 
 .box-collection {
-  font-family: 'Conv_futura_medium_bt-webfont';
+  font-family: "Conv_TA Encorpada VN-Regular";
   color: #e31f26;
   font-size: 38px;
   float: left;
@@ -13036,6 +13036,19 @@ yx-axis
         top: 14px; }
   .box-filter .btn-filter:focus, .box-filter .btn-filter:hover, .box-filter .btn-filter:active .box-filter .btn-filter.active, .box-filter .btn-default:focus, .box-filter .btn-default:hover, .box-filter .btn-default:active .box-filter .btn-filter.active, .box-filter .btn-filter:active .box-filter .btn-default.active, .box-filter .btn-default:active .box-filter .btn-default.active {
     background-color: #fff !important; }
+  .box-filter .btn-apply {
+    margin: 13px 0 0;
+    padding: 6px 30px;
+    border: none;
+    background-color: #e31f26;
+    color: #fff; }
+    .box-filter .btn-apply.btn-default {
+      background-color: #e31f26;
+      color: #fff; }
+      .box-filter .btn-apply.btn-default:focus, .box-filter .btn-apply.btn-default:hover, .box-filter .btn-apply.btn-default:active .box-filter .btn-apply.btn-default.active {
+        background-color: #e31f26 !important; }
+    .box-filter .btn-apply:focus, .box-filter .btn-apply:hover, .box-filter .btn-apply:active .box-filter .btn-apply.active {
+      background-color: #e31f26 !important; }
   .box-filter .scroll-to {
     float: left;
     width: 7%; }

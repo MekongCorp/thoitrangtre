@@ -252,6 +252,24 @@
     }
   }
 
+  .btn-apply{
+    margin: 13px 0 0;
+    padding: 6px 30px;
+    border: none;
+    &.btn-default{
+      background-color: $red;
+      color: $wht;
+      &:focus, &:hover, &:active &.active{
+        background-color: $red !important;
+      }
+    }
+    background-color: $red;
+    color: $wht;
+    &:focus, &:hover, &:active &.active{
+      background-color: $red !important;
+    }
+  }
+
   .scroll-to
   {
     float: left;
@@ -683,8 +701,7 @@
 
 }
 
-.category-2
-{
+.category-2 {
   background: url("../images/bg-category2.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
@@ -696,48 +713,46 @@
   top: 0;
   left: 0;
   text-align: center;
-  > h3{
+  > h3 {
     text-align: center;
     font-size: 40px;
     font-family: 'Conv_TA Encorpada VN-Regular';
     margin: 0 0 10px;
   }
-  ul{
+  ul {
     list-style-type: none;
     margin-left: -10px;
     margin-right: -10px;
     width: 90%;
     padding: 0;
     display: inline-block;
-    li{
+    li {
       padding-left: 10px;
       padding-right: 10px;
       margin: 0 0 20px;
 
     }
   }
-  .ttt-thumbnail
-  {
+  .ttt-thumbnail {
     margin: 0 0 5px;
   }
 
-  .ttt-caption
-  {
-    h4{
+  .ttt-caption {
+    h4 {
       color: $red;
       font-size: 12px;
       font-family: 'Conv_futura_medium_bt-webfont';
       margin: 0;
       @include link-color($red, $red);
     }
-    .name{
+    .name {
       font-size: 18px;
       color: $blk;
       font-family: 'Conv_TA Encorpada VN-Regular';
       margin: 0;
       @include link-color($red, $red);
     }
-    .year{
+    .year {
       font-size: 18px;
       color: $blk;
       font-family: 'Conv_TA Encorpada VN-Regular';
