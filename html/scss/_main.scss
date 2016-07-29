@@ -961,23 +961,7 @@
         @include link-color($blk, $red);
       }
     }
-  }
-  &:hover
-  {
-    .caption{
-      display: block;
-    }
-  }
-  @include respond-to(767)
-  {
-    .caption{
-      display: block;
-    }
-  }
 
-  .banner-navigation
-  {
-    position: relative;
     .owl-controls
     {
       width: 100%;
@@ -997,7 +981,6 @@
       height: 64px;
 
       >div{
-
         width: 38px;
         height: 58px;
         position: absolute;
@@ -1005,22 +988,43 @@
         text-indent: -9999px;
         pointer-events: auto;
         top: 0;
-        @include respond-to(767)
-        {
-        }
 
         &.owl-prev{
           background: url("../images/control_pre.png") no-repeat 0 0;
-          left: 0;
+          left: calc((100% - 940px)/2);
+          @include respond-to(medium-tablet)
+          {
+            left: 15px;
+          }
         }
         &.owl-next
         {
           background: url("../images/control_next.png") no-repeat 0 0;
-          right: 30px;
+          right: calc((100% - 940px)/2);
+          @include respond-to(medium-tablet)
+          {
+            right: 15px;
+          }
         }
       }
     }
+
+
   }
+  &:hover
+  {
+    .caption{
+      display: block;
+    }
+  }
+  @include respond-to(767)
+  {
+    .caption{
+      display: block;
+    }
+  }
+
+
   @include respond-to(small-tablet)
   {
     position: relative;
@@ -1028,16 +1032,7 @@
     {
       padding: 0;
     }
-    .banner-navigation
-    {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      .owl-controls
-      {
-        height: 100% !important;
-      }
-    }
+
   }
 }
 

@@ -25,11 +25,6 @@ thoitrangtre.Slider=(function($){
         (function ($) {
             $(document).ready(function(){
                 var banner=$(id);
-                banner.on('onInitAfter',function(e){
-                    var bannerHeight=$(banner).height();
-                    $(".owl-controls").appendTo(".banner-navigation");
-                    $(".banner-navigation .owl-controls").height(bannerHeight);
-                });
 
                 banner.owlCarousel({
                     singleItem : true,
@@ -146,14 +141,17 @@ thoitrangtre.Slider=(function($){
                     responsive: {
                         0:{
                             items:1, // In this configuration 1 is enabled from 0px up to 479px screen size
+                            nav: true
                         },
 
                         480:{
                             items:2, // from 480 to 677
+                            nav: true
                         },
 
                         600:{
                             items:3, // from this breakpoint 678 to 959
+                            nav: true
                         },
 
                         768:{

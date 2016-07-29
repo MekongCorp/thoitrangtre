@@ -13613,53 +13613,52 @@ yx-axis
           outline: none; }
         .banner-home .carousel-home .caption h3 > a:hover {
           color: #e31f26; }
-  .banner-home:hover .caption {
-    display: block; }
-  @media only screen and (max-width: 767px) {
-    .banner-home .caption {
-      display: block; } }
-  .banner-home .banner-navigation {
-    position: relative; }
-    .banner-home .banner-navigation .owl-controls {
+    .banner-home .carousel-home .owl-controls {
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       pointer-events: none;
       z-index: 100; }
-    .banner-home .banner-navigation .owl-nav {
+    .banner-home .carousel-home .owl-nav {
       position: relative;
       position: absolute;
       top: calc(50% - 70px);
       width: 100%;
       pointer-events: none;
       height: 64px; }
-      .banner-home .banner-navigation .owl-nav > div {
+      .banner-home .carousel-home .owl-nav > div {
         width: 38px;
         height: 58px;
         position: absolute;
         cursor: pointer;
         text-indent: -9999px;
         pointer-events: auto;
-        top: 0;
-        /* Landscape phones and down */ }
-        .banner-home .banner-navigation .owl-nav > div.owl-prev {
+        top: 0; }
+        .banner-home .carousel-home .owl-nav > div.owl-prev {
           background: url("../images/control_pre.png") no-repeat 0 0;
-          left: 0; }
-        .banner-home .banner-navigation .owl-nav > div.owl-next {
+          left: calc((100% - 940px)/2);
+          /* Landscape phones and down */ }
+          @media (max-width: 991px) {
+            .banner-home .carousel-home .owl-nav > div.owl-prev {
+              left: 15px; } }
+        .banner-home .carousel-home .owl-nav > div.owl-next {
           background: url("../images/control_next.png") no-repeat 0 0;
-          right: 30px; }
+          right: calc((100% - 940px)/2);
+          /* Landscape phones and down */ }
+          @media (max-width: 991px) {
+            .banner-home .carousel-home .owl-nav > div.owl-next {
+              right: 15px; } }
+  .banner-home:hover .caption {
+    display: block; }
+  @media only screen and (max-width: 767px) {
+    .banner-home .caption {
+      display: block; } }
   @media (max-width: 767px) {
     .banner-home {
       position: relative; }
       .banner-home .carousel-home {
-        padding: 0; }
-      .banner-home .banner-navigation {
-        position: absolute;
-        width: 100%;
-        height: 100%; }
-        .banner-home .banner-navigation .owl-controls {
-          height: 100% !important; } }
+        padding: 0; } }
 
 .wrapper-list-designer {
   width: 100%;
