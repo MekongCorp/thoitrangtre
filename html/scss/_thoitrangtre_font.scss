@@ -12,6 +12,7 @@
 
 }
 
+
 [data-icon]:before {
   font-family: "thoitrangtre" !important;
   content: attr(data-icon);
@@ -62,3 +63,16 @@
 .icon-arrow-circle-left:before {
   content: "\6c";
 }
+.icon-arrow-up:before {
+  content: "\61";
+}
+.icon-arrow-down-thin:before {
+  content: "\62";
+}
+.icon-remove:before {
+  content: "\63";
+}
+.icon-remove-delete:before {
+  content: "\64";
+}
+

@@ -19,9 +19,14 @@
 
   @include respond-to(small-tablet)
   {
-    float: none;
     margin: 20px auto 12px;
     display: inline-block;
+  }
+  @include respond-to(phone)
+  {
+    img{
+      width: 50px;
+    }
   }
 }
 
@@ -35,18 +40,28 @@
   padding: 0 0 0 30px;
   margin: 20px 0 0 30px;
   border-left: 1px solid $grey;
+  .icon-collection
+  {
+    display: inline-block;
+    color: #c7c7c7;
+    margin: 0 0 0 3px;
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+  }
   @include respond-to(medium-tablet)
   {
     font-size: 28px;
   }
   @include respond-to(small-tablet)
   {
-    float: none;
     display: inline-block;
   }
   @include respond-to(phone)
   {
-    font-size: 22px;
+    font-size: 18px;
+    margin: 20px 0 0 12px;
+    padding: 0 0 0 12px;
   }
 }
 
@@ -92,8 +107,14 @@
   }
   @include respond-to(small-tablet)
   {
-    float: none;
     margin: 0 auto;
+    li:nth-child(-n+2)
+    {
+      display: none;
+    }
+    li{
+      border: none;
+    }
   }
   @include respond-to(phone)
   {

@@ -23,6 +23,21 @@
   }
 }
 
+.destop-mode{
+  @include respond-to(small-tablet)
+  {
+    display: none;
+  }
+}
+
+.mobile-mode{
+  display: none;
+  @include respond-to(small-tablet)
+  {
+    display: block;
+  }
+}
+
 
 
 .ttt-pagination
@@ -285,6 +300,195 @@
   @include respond-to(small-tablet)
   {
     height: auto;
+  }
+}
+
+.box-filter-mobile
+{
+  height: 50px;
+  background-color: #d6d6d6;
+  position: relative;
+  .filter-content
+  {
+    height: 50px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    .name, .control-filter, .apply
+    {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .name
+    {
+      width: 59px;
+      min-width: 59px;
+      color: #4b4b4b;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 0 0 0 15px;
+    }
+    .control-filter
+    {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      >li{
+        height: 50px;
+        float: left;
+        width: 33.333333%;
+        >a{
+          text-align: center;
+          width: 100%;
+          height: 50px;
+          color: #4b4b4b;
+          line-height: 110%;
+          display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;      /* TWEENER - IE 10 */
+          display: -webkit-flex;     /* NEW - Chrome */
+          display: flex;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          position: relative;
+        }
+
+        .icon
+        {
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 3.5px 0 3.5px;
+          border-color: $blk transparent transparent transparent;
+          margin: 2px 0 0;
+        }
+
+        &.active
+        {
+         > a:before{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 7.5px 0 7.5px;
+            border-color: #d6d6d6 transparent transparent transparent;
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: -8px;
+            left: calc(50% - 7.5px);
+            z-index: 10;
+          }
+          .list-filter-mobile
+          {
+            display: block;
+          }
+        }
+      }
+      &.active{
+        > li{
+         > a{
+            color: #9b9c9c;
+          }
+
+          .icon{
+            border-color: #9b9c9c transparent transparent;
+          }
+          &.active{
+           > a{
+              color: #4b4b4b;
+            }
+            .icon{
+              border-color: #4b4b4b transparent transparent;
+            }
+          }
+        }
+      }
+
+    }
+    .apply{
+      min-width: 59px;
+      width: 59px;
+      position: relative;
+      z-index: 500;
+      .btn-apply
+      {
+        width: 100%;
+        height: 50px;
+        background-color: $red;
+        font-weight: bold;
+        color: $wht;
+        padding: 0;
+        @include border-radius(0);
+        border: none;
+      }
+    }
+  }
+}
+
+.list-filter-mobile
+{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 50px 0 20px;
+  text-align: center;
+  display: none;
+  &:before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: $blk;
+    @include opacity(0.9);
+    top: 0;
+    left: 0;
+  }
+  .btn-close{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+  .icon-show{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 5.5px 0 5.5px;
+    border-color: $wht transparent transparent transparent;
+    position: relative;
+    z-index: 2;
+  }
+  ul{
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+
+    li{
+      padding: 10px 0;
+      font-size: 12px;
+      a{
+        color: $wht;
+      }
+      span.date{
+        display: block;
+        clear: both;
+        font-weight: bold;
+      }
+    }
   }
 }
 
@@ -1018,17 +1222,15 @@
       display: block;
     }
   }
-  @include respond-to(767)
-  {
-    .caption{
-      display: block;
-    }
-  }
 
 
   @include respond-to(small-tablet)
   {
+    .caption{
+      display: block;
+    }
     position: relative;
+    margin: 0;
     .carousel-home
     {
       padding: 0;

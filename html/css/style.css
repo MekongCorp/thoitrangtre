@@ -7845,6 +7845,18 @@ a, a:focus, a:hover, object {
 .icon-arrow-circle-left:before {
   content: "\6c"; }
 
+.icon-arrow-up:before {
+  content: "\61"; }
+
+.icon-arrow-down-thin:before {
+  content: "\62"; }
+
+.icon-remove:before {
+  content: "\63"; }
+
+.icon-remove-delete:before {
+  content: "\64"; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -12297,12 +12309,18 @@ yx-axis
 .logo {
   float: left;
   margin: 15px 0 0;
+  /* Landscape phones and down */
   /* Landscape phones and down */ }
   @media (max-width: 767px) {
     .logo {
-      float: none;
       margin: 20px auto 12px;
       display: inline-block; } }
+  @media (max-width: 479px) {
+    .logo img {
+      width: 50px; } }
+  @media only screen and (max-width: phonepx) {
+    .logo img {
+      width: 50px; } }
 
 .box-collection {
   font-family: "Conv_TA Encorpada VN-Regular";
@@ -12317,19 +12335,29 @@ yx-axis
   /* Landscape phones and down */
   /* Landscape phones and down */
   /* Landscape phones and down */ }
+  .box-collection .icon-collection {
+    display: inline-block;
+    color: #c7c7c7;
+    margin: 0 0 0 3px;
+    position: relative;
+    top: 4px;
+    cursor: pointer; }
   @media (max-width: 991px) {
     .box-collection {
       font-size: 28px; } }
   @media (max-width: 767px) {
     .box-collection {
-      float: none;
       display: inline-block; } }
   @media (max-width: 479px) {
     .box-collection {
-      font-size: 22px; } }
+      font-size: 18px;
+      margin: 20px 0 0 12px;
+      padding: 0 0 0 12px; } }
   @media only screen and (max-width: phonepx) {
     .box-collection {
-      font-size: 22px; } }
+      font-size: 18px;
+      margin: 20px 0 0 12px;
+      padding: 0 0 0 12px; } }
 
 .header-right {
   float: right;
@@ -12362,8 +12390,11 @@ yx-axis
       color: #e31f26; }
   @media (max-width: 767px) {
     .header-right {
-      float: none;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+      .header-right li:nth-child(-n+2) {
+        display: none; }
+      .header-right li {
+        border: none; } }
   @media (max-width: 479px) {
     .header-right li {
       padding: 0 15px; } }
@@ -12862,6 +12893,19 @@ yx-axis
     -o-border-radius: 3px;
     border-radius: 3px; }
 
+.destop-mode {
+  /* Landscape phones and down */ }
+  @media (max-width: 767px) {
+    .destop-mode {
+      display: none; } }
+
+.mobile-mode {
+  display: none;
+  /* Landscape phones and down */ }
+  @media (max-width: 767px) {
+    .mobile-mode {
+      display: block; } }
+
 .ttt-pagination {
   width: 100%;
   text-align: center;
@@ -13061,6 +13105,156 @@ yx-axis
   @media (max-width: 767px) {
     .box-filter {
       height: auto; } }
+
+.box-filter-mobile {
+  height: 50px;
+  background-color: #d6d6d6;
+  position: relative; }
+  .box-filter-mobile .filter-content {
+    height: 50px;
+    display: table;
+    table-layout: fixed;
+    width: 100%; }
+    .box-filter-mobile .filter-content .name, .box-filter-mobile .filter-content .control-filter, .box-filter-mobile .filter-content .apply {
+      display: table-cell;
+      vertical-align: middle; }
+    .box-filter-mobile .filter-content .name {
+      width: 59px;
+      min-width: 59px;
+      color: #4b4b4b;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 0 0 0 15px; }
+    .box-filter-mobile .filter-content .control-filter {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      .box-filter-mobile .filter-content .control-filter > li {
+        height: 50px;
+        float: left;
+        width: 33.333333%; }
+        .box-filter-mobile .filter-content .control-filter > li > a {
+          text-align: center;
+          width: 100%;
+          height: 50px;
+          color: #4b4b4b;
+          line-height: 110%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          position: relative; }
+        .box-filter-mobile .filter-content .control-filter > li .icon {
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 3.5px 0 3.5px;
+          border-color: #000 transparent transparent transparent;
+          margin: 2px 0 0; }
+        .box-filter-mobile .filter-content .control-filter > li.active > a:before {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 8px 7.5px 0 7.5px;
+          border-color: #d6d6d6 transparent transparent transparent;
+          position: absolute;
+          display: block;
+          content: "";
+          bottom: -8px;
+          left: calc(50% - 7.5px);
+          z-index: 10; }
+        .box-filter-mobile .filter-content .control-filter > li.active .list-filter-mobile {
+          display: block; }
+      .box-filter-mobile .filter-content .control-filter.active > li > a {
+        color: #9b9c9c; }
+      .box-filter-mobile .filter-content .control-filter.active > li .icon {
+        border-color: #9b9c9c transparent transparent; }
+      .box-filter-mobile .filter-content .control-filter.active > li.active > a {
+        color: #4b4b4b; }
+      .box-filter-mobile .filter-content .control-filter.active > li.active .icon {
+        border-color: #4b4b4b transparent transparent; }
+    .box-filter-mobile .filter-content .apply {
+      min-width: 59px;
+      width: 59px;
+      position: relative;
+      z-index: 500; }
+      .box-filter-mobile .filter-content .apply .btn-apply {
+        width: 100%;
+        height: 50px;
+        background-color: #e31f26;
+        font-weight: bold;
+        color: #fff;
+        padding: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        border: none; }
+
+.list-filter-mobile {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 50px 0 20px;
+  text-align: center;
+  display: none; }
+  .list-filter-mobile:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #000;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+    top: 0;
+    left: 0; }
+  .list-filter-mobile .btn-close {
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    cursor: pointer; }
+  .list-filter-mobile .icon-show {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 5.5px 0 5.5px;
+    border-color: #fff transparent transparent transparent;
+    position: relative;
+    z-index: 2; }
+  .list-filter-mobile ul {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    list-style-type: none; }
+    .list-filter-mobile ul li {
+      padding: 10px 0;
+      font-size: 12px; }
+      .list-filter-mobile ul li a {
+        color: #fff; }
+      .list-filter-mobile ul li span.date {
+        display: block;
+        clear: both;
+        font-weight: bold; }
 
 .box-slider {
   padding-top: 20px;
@@ -13571,7 +13765,6 @@ yx-axis
 
 .banner-home {
   margin: -15px 0 0;
-  /* Landscape phones and down */
   /* Landscape phones and down */ }
   .banner-home .carousel-home {
     padding: 0 130px 0 0;
@@ -13652,12 +13845,12 @@ yx-axis
               right: 15px; } }
   .banner-home:hover .caption {
     display: block; }
-  @media only screen and (max-width: 767px) {
-    .banner-home .caption {
-      display: block; } }
   @media (max-width: 767px) {
     .banner-home {
-      position: relative; }
+      position: relative;
+      margin: 0; }
+      .banner-home .caption {
+        display: block; }
       .banner-home .carousel-home {
         padding: 0; } }
 

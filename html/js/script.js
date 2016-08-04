@@ -345,6 +345,22 @@ thoitrangtre.event=(function($){
                     button.html(t +" <span class=\"caret\"></span>");
                 });
 
+                $(".box-filter-mobile .control-filter > li > a").click(function(event){
+                    event.preventDefault();
+                    var $this=$(this);
+                    var $parent=$this.parent("li");
+                    $(".box-filter-mobile .control-filter > li").removeClass("active")
+                    $parent.addClass("active");
+                    $(".control-filter").addClass("active");
+                });
+
+                $(".list-filter-mobile .btn-close").click(function(event){
+                    event.preventDefault();
+                    $(this).parents("li:first").removeClass("active");
+                    $(".control-filter").removeClass("active");
+                });
+
+
             });
         })(jQuery);
     };
