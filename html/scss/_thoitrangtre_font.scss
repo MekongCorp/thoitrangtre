@@ -12,7 +12,6 @@
 
 }
 
-
 [data-icon]:before {
   font-family: "thoitrangtre" !important;
   content: attr(data-icon);
@@ -75,4 +74,6 @@
 .icon-remove-delete:before {
   content: "\64";
 }
-
+.icon-check:before {
+  content: "\6d";
+}

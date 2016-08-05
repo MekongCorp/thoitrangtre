@@ -366,7 +366,7 @@
           border-style: solid;
           border-width: 5px 3.5px 0 3.5px;
           border-color: $blk transparent transparent transparent;
-          margin: 2px 0 0;
+          margin: 5px 0 0;
         }
 
         &.active
@@ -409,11 +409,10 @@
           }
         }
       }
-
     }
     .apply{
-      min-width: 59px;
-      width: 59px;
+      min-width: 40px;
+      width: 40px;
       position: relative;
       z-index: 500;
       .btn-apply
@@ -425,7 +424,11 @@
         color: $wht;
         padding: 0;
         @include border-radius(0);
+        outline: none;
         border: none;
+        -webkit-box-shadow: inset 0px 2px 10px 0px rgba(0,0,0,0.58);
+        -moz-box-shadow: inset 0px 2px 10px 0px rgba(0,0,0,0.58);
+        box-shadow: inset 0px 2px 10px 0px rgba(0,0,0,0.58);
       }
     }
   }
@@ -1213,9 +1216,8 @@
         }
       }
     }
-
-
   }
+
   &:hover
   {
     .caption{
@@ -1223,19 +1225,17 @@
     }
   }
 
-
   @include respond-to(small-tablet)
   {
-    .caption{
-      display: block;
-    }
     position: relative;
     margin: 0;
     .carousel-home
     {
       padding: 0;
+      .caption{
+        display: block;
+      }
     }
-
   }
 }
 
@@ -1318,12 +1318,7 @@
       height: 33px;
       line-height: 33px;
     }
-    .dropdown.open{
-      .btn-filter{
-        height: 33px;
-        line-height: 33px;
-      }
-    }
+
   }
   @include respond-to(small-tablet)
   {
@@ -1331,6 +1326,42 @@
     padding: 0 15px;
     .box-filter{
       display: block;
+    }
+  }
+}
+
+.box-filter-fashion
+{
+  min-height: 95px;
+  margin: 0 auto;
+  .dropdown{
+    .btn-filter
+    {
+      min-height: 95px;
+      line-height: 130%;
+      text-align: center;
+      font-size: 15.8px;
+      border-color: #ebebeb;
+      @include border-radius(0);
+      color: $blk;
+      font-family: 'Conv_TA Encorpada VN-Regular';
+      span.title{
+        font-size: 20.3px;
+        display: block;
+        clear: both;
+      }
+      .caret{
+        top: auto;
+        bottom: 13px;
+        right: auto;
+        left: calc(50% - 5px);
+      }
+    }
+    &.open{
+      .btn-filter{
+        min-height: 95px;
+        line-height: 130%;
+      }
     }
   }
 }
@@ -1398,6 +1429,22 @@
       .owl-nav{
         top: calc(50% - 40px);
       }
+    }
+  }
+  .owl-nav
+  {
+    > div.owl-prev
+    {
+      background: url("../images/control_pre.png") no-repeat scroll 0 0;
+      height: 60px;
+      width: 35px;
+    }
+
+    > div.owl-next
+    {
+      background: url("../images/control_next.png") no-repeat scroll 0 0;
+      width: 35px;
+      height: 60px;
     }
   }
 }
