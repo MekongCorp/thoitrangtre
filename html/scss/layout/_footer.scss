@@ -45,7 +45,10 @@
   }
   @include respond-to(medium-tablet)
   {
-    display: none;
+    float: none;
+    margin: 0 auto 15px;
+    width: auto;
+    text-align: center;
   }
 }
 
@@ -58,9 +61,9 @@
 
   @include respond-to(medium-tablet)
   {
-    display: none;
+    float: none;
+    margin: 0 auto;
   }
-
 
   ul {
     list-style-type: none;
@@ -95,6 +98,35 @@
       }
     }
   }
+
+  @include respond-to(small-tablet)
+  {
+    height: auto;
+    ul{
+      display: block;
+      text-align: center;
+      li{
+        display: inline-block;
+        &:before{
+          background: none;
+        }
+      }
+    }
+  }
+  @include respond-to(phone)
+  {
+    border-bottom: 1px solid #dddddd;
+    margin: 0 auto 15px;
+    ul{
+      display: block;
+      text-align: center;
+      li{
+        display: block;
+        margin: 0 0 7px;
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .footer-widget
@@ -109,6 +141,8 @@
   {
     @include make-xs-column(12);
     padding-left: 27px;
+    padding-top: 25px;
+    background: url("../images/icon-point.png") no-repeat 50% top;
   }
 
   float: none;

@@ -12789,17 +12789,23 @@ yx-axis
     max-width: 95px; }
   @media (max-width: 991px) {
     .logo-footer {
-      display: none; } }
+      float: none;
+      margin: 0 auto 15px;
+      width: auto;
+      text-align: center; } }
 
 .nav-footer {
   width: 88%;
   height: 30px;
   margin: 20px 0 0;
   float: right;
+  /* Landscape phones and down */
+  /* Landscape phones and down */
   /* Landscape phones and down */ }
   @media (max-width: 991px) {
     .nav-footer {
-      display: none; } }
+      float: none;
+      margin: 0 auto; } }
   .nav-footer ul {
     list-style-type: none;
     padding: 0;
@@ -12824,6 +12830,38 @@ yx-axis
         font-family: 'Conv_TA Encorpada VN-Regular';
         color: #000;
         padding: 0 0 0 10px; }
+  @media (max-width: 767px) {
+    .nav-footer {
+      height: auto; }
+      .nav-footer ul {
+        display: block;
+        text-align: center; }
+        .nav-footer ul li {
+          display: inline-block; }
+          .nav-footer ul li:before {
+            background: none; } }
+  @media (max-width: 479px) {
+    .nav-footer {
+      border-bottom: 1px solid #dddddd;
+      margin: 0 auto 15px; }
+      .nav-footer ul {
+        display: block;
+        text-align: center; }
+        .nav-footer ul li {
+          display: block;
+          margin: 0 0 7px;
+          font-size: 18px; } }
+  @media only screen and (max-width: phonepx) {
+    .nav-footer {
+      border-bottom: 1px solid #dddddd;
+      margin: 0 auto 15px; }
+      .nav-footer ul {
+        display: block;
+        text-align: center; }
+        .nav-footer ul li {
+          display: block;
+          margin: 0 0 7px;
+          font-size: 18px; } }
 
 .footer-widget {
   position: relative;
@@ -12876,7 +12914,9 @@ yx-axis
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px;
-      padding-left: 27px; } }
+      padding-left: 27px;
+      padding-top: 25px;
+      background: url("../images/icon-point.png") no-repeat 50% top; } }
   .footer-widget h3 {
     font-size: 14px;
     line-height: 120%;
@@ -14112,5 +14152,18 @@ yx-axis
         outline: none; }
       .search-result .list-search .ttt-caption .year > a:hover, .category-3 .list-search .ttt-caption .year > a:hover, .category-3 .list-category-3 .ttt-caption .year > a:hover {
         color: #e31f26; }
+
+.page-loading {
+  background: #000 url("../images/loading.gif") no-repeat center center;
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none; }
+  .page-loading.active {
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */
