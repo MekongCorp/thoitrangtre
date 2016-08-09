@@ -91,9 +91,9 @@
         }
       }
 
+      @include link-color($blk,$violet,$violet);
       a{
         font-family: 'Conv_TA Encorpada VN-Regular';
-        color: $blk;
         padding: 0 0 0 10px;
       }
     }
