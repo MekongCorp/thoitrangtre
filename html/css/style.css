@@ -12346,10 +12346,17 @@ yx-axis
     top: 4px;
     cursor: pointer;
     font-size: 32px;
+    /* Landscape phones and down */
     /* Landscape phones and down */ }
     @media (max-width: 991px) {
       .box-collection .icon-collection {
         font-size: 28px; } }
+    @media (max-width: 479px) {
+      .box-collection .icon-collection {
+        font-size: 18px; } }
+    @media only screen and (max-width: phonepx) {
+      .box-collection .icon-collection {
+        font-size: 18px; } }
   @media (max-width: 991px) {
     .box-collection {
       font-size: 28px; } }

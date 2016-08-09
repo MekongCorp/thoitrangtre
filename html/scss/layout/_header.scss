@@ -53,6 +53,10 @@
     {
       font-size: 28px;
     }
+    @include respond-to(phone)
+    {
+      font-size: 18px;
+    }
   }
   @include respond-to(medium-tablet)
   {
