@@ -12344,7 +12344,12 @@ yx-axis
     margin: 0 0 0 3px;
     position: relative;
     top: 4px;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 32px;
+    /* Landscape phones and down */ }
+    @media (max-width: 991px) {
+      .box-collection .icon-collection {
+        font-size: 28px; } }
   @media (max-width: 991px) {
     .box-collection {
       font-size: 28px; } }
@@ -12916,7 +12921,8 @@ yx-axis
       padding-right: 15px;
       padding-left: 27px;
       padding-top: 25px;
-      background: url("../images/icon-point.png") no-repeat 50% top; } }
+      background: url("../images/icon-point.png") no-repeat 50% top;
+      text-align: center; } }
   .footer-widget h3 {
     font-size: 14px;
     line-height: 120%;
@@ -13921,8 +13927,7 @@ yx-axis
     display: block; }
   @media (max-width: 767px) {
     .banner-home {
-      position: relative;
-      margin: 0; }
+      position: relative; }
       .banner-home .carousel-home {
         padding: 0; }
         .banner-home .carousel-home .caption {
