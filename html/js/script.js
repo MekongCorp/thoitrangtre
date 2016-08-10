@@ -53,7 +53,7 @@ thoitrangtre.Slider=(function($){
                     },
                     navigation: true,
                     pagination:true,
-                    slideSpeed : 500,
+                    slideSpeed : 1000,
                     callbacks:true,
                     margin: 0,
                     nav:true,
@@ -62,7 +62,8 @@ thoitrangtre.Slider=(function($){
                     dots: false,
                     responsiveRefreshRate : 200,
                     autoplay: true,
-                    autoplayTimeout: 4000,
+                    autoplayTimeout: 6000,
+                    autoplaySpeed: 500,
                     autoplayHoverPause: true,
 
                     navText: ['<i class="glyphicon glyphicon-menu-left"></i>','<i class="glyphicon glyphicon-menu-right"></i>']
