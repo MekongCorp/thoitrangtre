@@ -1,29 +1,80 @@
-function populate_selectbox(obj, data)
+function set_selectbox_label(obj, selid)
 {
-    $(obj).find('li').remove();
-    for(var i=0; i<data.length; i++)
+    if(isNaN(selid))
     {
-        $(obj).find('ul').prepend('<li><a href="javascript:void(0);" rel="' + data[i].id + '">' + data[i].name + '</a></li>');
+        $(obj).parentsUntil('.column').find('.dropdown-toggle').first().html(selid + '<span class="caret"></span>');
+        return;
+    }
+    if($(obj).find('a[rel="'+selid+'"]').length > 0)
+    {
+        var _label = $(obj).find('a[rel="'+selid+'"]').text();
+        $(obj).parentsUntil('.column').find('.dropdown-toggle').first().html(_label + '<span class="caret"></span>');
     }
 }
 
 (function ($) {
     $(document).ready(function(){
-       $('.selectbox_regions a').click(function(){
+        $('.selectbox_regions').on('click', 'a', function(){
+           if($('#hidden_selectbox_regions').val() != $(this).attr('rel'))
+           {
+               //change region, reset season and brand selections
+               //season
+               set_selectbox_label('.selectbox_seasons', 'Thời gian');
+               $('#hidden_selectbox_seasons').val('0');
+               //brand
+               set_selectbox_label('.selectbox_brands', 'Thương hiệu');
+               $('#hidden_selectbox_brands').val('0');
+           }
+           set_selectbox_label('.selectbox_regions', $(this).attr('rel'));
            $('#hidden_selectbox_regions').val($(this).attr('rel'));
-           $.getJSON('/ajax/seasons?session_save=true&regionid=' + $(this).attr('rel'), null, function(data){
-               populate_selectbox('.selectbox_seasons', data);
+           //load seasons
+           $.getJSON('/index.php/ajax/seasons/' + $(this).attr('rel') + '/true', null, function(data){
+                //repopulate seasons selectbox
+                $('.selectbox_seasons').find('li').remove();
+                for(var i=0; i<data.length; i++)
+                {
+                    $('.selectbox_seasons').append('<li><a href="javascript:void(0);" rel="' + data[i].id + '">' + data[i].name + '</a></li>');
+                }
            });
-       });
-       $('.selectbox_seasons a').click(function(){
+           //load brands
+           $.getJSON('/index.php/ajax/brands/' + $(this).attr('rel') + '/true', null, function(data){
+               //repopulate brands selectbox
+               $('.selectbox_brands .filter-scrollbar').html('');
+               for(var char in data)
+               {
+                   $('.selectbox_brands .filter-scrollbar').append('<h3 id="'+char+'">'+char+'</h3><ul></ul>');
+                   for(var i=0; i<data[char].length; i++)
+                   {
+                       $('.selectbox_brands .filter-scrollbar ul').last().append('<li><a href="javascript:void(0);" rel="' + data[char][i].id + '">' + data[char][i].name + '</a></li>');
+                   }
+               }
+           });
+        });
+        $('.selectbox_seasons').on('click', 'a', function(){
+           set_selectbox_label('.selectbox_seasons', $(this).attr('rel'));
            $('#hidden_selectbox_seasons').val($(this).attr('rel'));
-           var regionid = $('#hidden_selectbox_regions').val();
-           $.getJSON('/ajax/brands?session_save=true&regionid=' + regionid + '&seasonid=' + $(this).attr('rel'), null, function(data){
-               populate_selectbox('.selectbox_brands', data);
-           });
-       });
-       $('.selectbox_brands a').click(function(){
+        });
+        $('.selectbox_brands').on('click', 'a', function(){
+           set_selectbox_label('.selectbox_brands', $(this).attr('rel'));
            $('#hidden_selectbox_brands').val($(this).attr('rel'));
-       });
+        });
+        
+        //init labels
+        var sel_regionid = $('#hidden_selectbox_regions').val();
+        var sel_seasonid = $('#hidden_selectbox_seasons').val();
+        var sel_brandid = $('#hidden_selectbox_brands').val();
+        set_selectbox_label('.selectbox_regions', sel_regionid);
+        set_selectbox_label('.selectbox_seasons', sel_seasonid);
+        set_selectbox_label('.selectbox_brands', sel_brandid);
+        
+        //filter form setup
+        $('#filter_form').submit(function(){
+            $.preventDefault();
+            var sel_regionid = $('#hidden_selectbox_regions').val();
+            var sel_seasonid = $('#hidden_selectbox_seasons').val();
+            var sel_brandid = $('#hidden_selectbox_brands').val();
+            $action = $(this).attr('action');
+            $action = $action.replace('/search.html', '/search/'+sel_regionid+'/'+sel_seasonid+'/'+sel_brandid+'.html');
+        });
     });
 })(jQuery);
