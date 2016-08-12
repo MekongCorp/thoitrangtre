@@ -792,6 +792,20 @@
     }
     .social{
       float: right;
+      img{
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        filter: url(desaturate.svg#greyscale);
+        filter: grayscale(100%);
+        @include opacity(0.8);
+        &:hover{
+          filter: none;
+          -webkit-filter: none;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: initial;
+        }
+      }
     }
   }
   p{

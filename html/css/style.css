@@ -13597,6 +13597,19 @@ yx-axis
       float: left; }
     .profile-detail .share-social .social {
       float: right; }
+      .profile-detail .share-social .social img {
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        filter: url(desaturate.svg#greyscale);
+        filter: grayscale(100%);
+        -moz-opacity: 0.8;
+        opacity: 0.8; }
+        .profile-detail .share-social .social img:hover {
+          filter: none;
+          -webkit-filter: none;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          opacity: initial; }
   .profile-detail p {
     font-size: 12px;
     color: #000; }
