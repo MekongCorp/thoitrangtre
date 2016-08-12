@@ -12343,15 +12343,15 @@ yx-axis
     color: #c7c7c7;
     margin: 0 0 0 3px;
     position: relative;
-    top: 5px;
+    top: 13px;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 22px;
     /* Landscape phones and down */
     /* Landscape phones and down */ }
     @media (max-width: 991px) {
       .box-collection .icon-collection {
-        font-size: 28px;
-        top: 8px; } }
+        font-size: 22px;
+        top: 12px; } }
     @media (max-width: 479px) {
       .box-collection .icon-collection {
         font-size: 18px;
@@ -12362,7 +12362,8 @@ yx-axis
         top: 14px; } }
   @media (max-width: 991px) {
     .box-collection {
-      font-size: 28px; } }
+      font-size: 22px;
+      top: 8px; } }
   @media (max-width: 767px) {
     .box-collection {
       display: inline-block; } }
@@ -13755,6 +13756,12 @@ yx-axis
       outline: none; }
     .category-2 .ttt-caption .year > a:hover {
       color: #e31f26; }
+
+.category-3 .list-category-3:before, .category-3 .list-category-3:after {
+  content: " ";
+  display: table; }
+.category-3 .list-category-3:after {
+  clear: both; }
 
 .category-more {
   text-align: center; }
