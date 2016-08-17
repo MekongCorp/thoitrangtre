@@ -121,7 +121,7 @@
     color: $red;
     margin: 0;
     font-size: 14px;
-    font-family: 'Conv_futura_medium_bt-webfont';
+   // font-family: 'Conv_futura_medium_bt-webfont';
   }
   .date{
     font-size: 12px;
@@ -798,6 +798,7 @@
         filter: url(desaturate.svg#greyscale);
         filter: grayscale(100%);
         @include opacity(0.8);
+
         &:hover{
           filter: none;
           -webkit-filter: none;
@@ -989,6 +990,7 @@
   @extend .search-result;
   .list-category-3{
     @extend .list-search;
+    @include clearfix;
   }
 }
 

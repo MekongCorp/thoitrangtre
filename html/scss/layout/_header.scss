@@ -46,13 +46,13 @@
     color: #c7c7c7;
     margin: 0 0 0 3px;
     position: relative;
-    top: 5px;
+    top: 13px;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 22px;
     @include respond-to(medium-tablet)
     {
-      font-size: 28px;
-      top: 8px;
+      font-size: 22px;
+      top: 12px;
     }
     @include respond-to(phone)
     {
@@ -62,7 +62,8 @@
   }
   @include respond-to(medium-tablet)
   {
-    font-size: 28px;
+    font-size: 22px;
+    top: 8px;
   }
   @include respond-to(small-tablet)
   {
