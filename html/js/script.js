@@ -171,10 +171,9 @@ thoitrangtre.Slider=(function($){
                     dots: false,
                     responsiveRefreshRate : 200,
 
-                    //      navText: ['<span class=\"icon-next\"><span class=\"path1\"></span><span class=\"path2\"></span><span class="path3"></span> </span>','<i class="glyphicon glyphicon-menu-right"></i>']
+
 
                 });
-
 
 
                 $(".content-list-designer").mCustomScrollbar({ scrollbarPosition:"inside"});

@@ -1436,30 +1436,34 @@
       position: absolute;
     }
   }
+  .owl-controls
+  {
+    .owl-nav{
+      top: calc(50% - 40px);
+    }
+  }
   @include respond-to(small-tablet)
   {
     padding: 0;
-    .owl-controls
-    {
-      .owl-nav{
-        top: calc(50% - 40px);
-      }
-    }
   }
   .owl-nav
   {
+    >div{
+      @include opacity(0.8);
+    }
     > div.owl-prev
     {
       background: url("../images/control_pre.png") no-repeat scroll 0 0;
       height: 60px;
       width: 35px;
+      left: 10px;
     }
-
     > div.owl-next
     {
       background: url("../images/control_next.png") no-repeat scroll 0 0;
       width: 35px;
       height: 60px;
+      right: 30px;
     }
   }
 }

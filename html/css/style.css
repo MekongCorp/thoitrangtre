@@ -14135,13 +14135,14 @@ yx-axis
   @media (max-width: 767px) {
     .carousel-style-4 {
       padding: 0; } }
+  .carousel-style-4 .owl-nav > div {
+    -moz-opacity: 0.8;
+    opacity: 0.8; }
   .carousel-style-4 .owl-nav > div.owl-prev {
     background: url("../images/control_pre.png") no-repeat scroll 0 0;
     height: 60px;
     width: 35px;
-    left: 10px;
-    -moz-opacity: 0.8;
-    opacity: 0.8; }
+    left: 10px; }
   .carousel-style-4 .owl-nav > div.owl-next {
     background: url("../images/control_next.png") no-repeat scroll 0 0;
     width: 35px;
