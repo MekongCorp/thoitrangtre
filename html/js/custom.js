@@ -68,13 +68,16 @@ function set_selectbox_label(obj, selid)
         set_selectbox_label('.selectbox_brands', sel_brandid);
         
         //filter form setup
-        $('#filter_form').submit(function(){
-            $.preventDefault();
+        $('#filter_form').submit(function(event){
+            event.preventDefault();
             var sel_regionid = $('#hidden_selectbox_regions').val();
             var sel_seasonid = $('#hidden_selectbox_seasons').val();
             var sel_brandid = $('#hidden_selectbox_brands').val();
-            $action = $(this).attr('action');
-            $action = $action.replace('/search.html', '/search/'+sel_regionid+'/'+sel_seasonid+'/'+sel_brandid+'.html');
+            var action = $(this).attr('action');
+            action = action.replace('/search.html', '/search/'+sel_regionid+'/'+sel_seasonid+'/'+sel_brandid+'.html');
+            window.location = action;
+            return false;
+            //$(this).attr('action', $action);
         });
     });
 })(jQuery);
