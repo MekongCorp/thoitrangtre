@@ -14130,19 +14130,25 @@ yx-axis
       -moz-opacity: 0.6;
       opacity: 0.6;
       position: absolute; }
+  .carousel-style-4 .owl-controls .owl-nav {
+    top: calc(50% - 40px); }
   @media (max-width: 767px) {
     .carousel-style-4 {
-      padding: 0; }
-      .carousel-style-4 .owl-controls .owl-nav {
-        top: calc(50% - 40px); } }
+      padding: 0; } }
   .carousel-style-4 .owl-nav > div.owl-prev {
     background: url("../images/control_pre.png") no-repeat scroll 0 0;
     height: 60px;
-    width: 35px; }
+    width: 35px;
+    left: 10px;
+    -moz-opacity: 0.8;
+    opacity: 0.8; }
   .carousel-style-4 .owl-nav > div.owl-next {
     background: url("../images/control_next.png") no-repeat scroll 0 0;
     width: 35px;
-    height: 60px; }
+    height: 60px;
+    right: 30px;
+    -moz-opacity: 0.8;
+    opacity: 0.8; }
 
 .page-404 {
   width: 100%;

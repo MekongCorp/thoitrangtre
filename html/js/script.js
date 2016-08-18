@@ -161,7 +161,7 @@ thoitrangtre.Slider=(function($){
                         }
                     },
 
-                    navigation: false,
+                    navigation: true,
                     pagination:false,
                     slideSpeed : 500,
                     margin: 5,
