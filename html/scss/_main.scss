@@ -1126,6 +1126,10 @@
       @include border-radius(none);
     }
   }
+
+  .owl-item{
+    background: #eee url("../images/ring-alt.gif") no-repeat center center;
+  }
   .ttt-caption
   {
     text-align: center;
@@ -1175,6 +1179,9 @@
     .owl-stage-outer
     {
       overflow: visible;
+    }
+    .owl-item{
+      background: #eee url("../images/ring-alt.gif") no-repeat center center;
     }
     .ttt-thumbnail
     {
@@ -1444,6 +1451,9 @@
   .owl-stage-outer
   {
     overflow: visible;
+  }
+  .owl-item{
+    background: #eee url("../images/ring-alt.gif") no-repeat center center;
   }
   .ttt-caption
   {

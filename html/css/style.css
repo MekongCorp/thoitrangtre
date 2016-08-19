@@ -13866,6 +13866,8 @@ yx-axis
     -moz-border-radius: none;
     -o-border-radius: none;
     border-radius: none; }
+.carousel-style-3 .owl-item {
+  background: #eee url("../images/ring-alt.gif") no-repeat center center; }
 .carousel-style-3 .ttt-caption {
   text-align: center; }
   .carousel-style-3 .ttt-caption h3 {
@@ -13916,6 +13918,8 @@ yx-axis
     overflow: hidden; }
     .banner-home .carousel-home .owl-stage-outer {
       overflow: visible; }
+    .banner-home .carousel-home .owl-item {
+      background: #eee url("../images/ring-alt.gif") no-repeat center center; }
     .banner-home .carousel-home .ttt-thumbnail {
       border: none;
       margin: 0;
@@ -14130,6 +14134,8 @@ yx-axis
   /* Landscape phones and down */ }
   .carousel-style-4 .owl-stage-outer {
     overflow: visible; }
+  .carousel-style-4 .owl-item {
+    background: #eee url("../images/ring-alt.gif") no-repeat center center; }
   .carousel-style-4 .ttt-caption {
     background: none;
     display: block; }
