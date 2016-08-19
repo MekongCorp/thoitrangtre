@@ -14178,7 +14178,8 @@ yx-axis
 
 .search-result .ttt-thumbnail, .category-3 .ttt-thumbnail {
   border: none;
-  margin: 0 0 10px; }
+  margin: 0 0 10px;
+  background: #eee url("../images/ring-alt.gif") no-repeat center center; }
   .search-result .ttt-thumbnail img, .category-3 .ttt-thumbnail img {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;

@@ -1520,6 +1520,7 @@
   {
     border: none;
     margin: 0 0 10px;
+    background: #eee url("../images/ring-alt.gif") no-repeat center center;
     img{
       @include border-radius(0);
     }
@@ -1546,6 +1547,7 @@
     .ttt-caption
     {
       text-align: center;
+
       h3{
         color: $red;
         font-size: 12px;
