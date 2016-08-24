@@ -297,7 +297,7 @@ thoitrangtre.Slider=(function($){
         this.sliderPagerStyle=sliderPagerStyle;
     };
 
-    return {"init": init, func_gallerySlider: func_gallerySlider, sliderStyle: sliderStyle};
+    return {"init": init, func_gallerySlider: func_gallerySlider, sliderStyle: sliderStyle, func_carousel4: func_carousel4};
 })($);
 thoitrangtre.Slider.init();
 
