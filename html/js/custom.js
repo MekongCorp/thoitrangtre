@@ -79,5 +79,10 @@ function set_selectbox_label(obj, selid)
             return false;
             //$(this).attr('action', $action);
         });
+        
+        //images lazy load
+        $('img[data-lazy]').each(function(i,e){
+            $(e).attr('src', $(e).attr('data-lazy'));
+        });
     });
 })(jQuery);
