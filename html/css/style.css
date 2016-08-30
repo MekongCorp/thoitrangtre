@@ -12338,6 +12338,12 @@ yx-axis
   /* Landscape phones and down */
   /* Landscape phones and down */
   /* Landscape phones and down */ }
+  .box-collection > a {
+    color: #e31f26;
+    text-decoration: none;
+    outline: none; }
+  .box-collection > a:hover {
+    color: #e31f26; }
   .box-collection .icon-collection {
     display: inline-block;
     color: #c7c7c7;
@@ -12378,7 +12384,8 @@ yx-axis
       margin: 20px 0 0 12px;
       padding: 0 0 0 12px; } }
   .box-collection .dropdown-collection {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: none;
     margin: 0;
     padding: 0;
     border: none;
