@@ -12,6 +12,14 @@ function set_selectbox_label(obj, selid)
     }
 }
 
+function load_lazy_images()
+{
+	$('img[data-lazy]').each(function(i,e){
+		$(e).attr('src', $(e).attr('data-lazy'));
+		$(e).removeAttr('data-lazy');
+	});
+}
+
 (function ($) {
     $(document).ready(function(){
         $('.selectbox_regions').on('click', 'a', function(){
@@ -81,8 +89,17 @@ function set_selectbox_label(obj, selid)
         });
         
         //images lazy load
-        $('img[data-lazy]').each(function(i,e){
-            $(e).attr('src', $(e).attr('data-lazy'));
-        });
+        load_lazy_images();
+		
+		//ajax load module items by brand
+		$('.ajax_load_brand').click(function(event){
+			event.preventDefault();
+			event.stopImmediatePropagation();
+			$(this).parentsUntil('.box-designer').last().find('.slider-designer').load($(this).attr('href'), function(){
+				load_lazy_images();
+				thoitrangtre.Slider.func_carousel4(".carousel-style-4");
+			});
+			return false;
+		});
     });
 })(jQuery);
