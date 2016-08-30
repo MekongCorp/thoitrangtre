@@ -12384,8 +12384,8 @@ yx-axis
       margin: 20px 0 0 12px;
       padding: 0 0 0 12px; } }
   .box-collection .dropdown-collection {
-    /*display: inline-block;*/
     display: none;
+    /*display: inline-block;*/
     margin: 0;
     padding: 0;
     border: none;
