@@ -78,8 +78,8 @@
   }
   .dropdown-collection
   {
-    /*display: inline-block;*/
     display: none;
+    /*display: inline-block;*/
     margin: 0;
     padding: 0;
     border: none;
@@ -267,6 +267,7 @@
   position: absolute;
   margin-top: -1px;
   display: none;
+  outline: none;
   &.active{
     display: block;
   }

@@ -12546,6 +12546,7 @@ yx-axis
   position: absolute;
   margin-top: -1px;
   display: none;
+  outline: none;
   /* Landscape phones and down */ }
   .search-top.active {
     display: block; }
