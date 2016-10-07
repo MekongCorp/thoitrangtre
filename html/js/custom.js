@@ -47,13 +47,13 @@ function load_lazy_images()
            //load brands
            $.getJSON('/index.php/ajax/brands/' + $(this).attr('rel') + '/true', null, function(data){
                //repopulate brands selectbox
-               $('.selectbox_brands .filter-scrollbar').html('');
+               $('.selectbox_brands .mCSB_container').html('');
                for(var char in data)
                {
-                   $('.selectbox_brands .filter-scrollbar').append('<h3 id="'+char+'">'+char+'</h3><ul></ul>');
+                   $('.selectbox_brands .mCSB_container').append('<h3 id="'+char+'">'+char+'</h3><ul></ul>');
                    for(var i=0; i<data[char].length; i++)
                    {
-                       $('.selectbox_brands .filter-scrollbar ul').last().append('<li><a href="javascript:void(0);" rel="' + data[char][i].id + '">' + data[char][i].name + '</a></li>');
+                       $('.selectbox_brands .mCSB_container ul').last().append('<li><a href="javascript:void(0);" rel="' + data[char][i].id + '">' + data[char][i].name + '</a></li>');
                    }
                }
            });

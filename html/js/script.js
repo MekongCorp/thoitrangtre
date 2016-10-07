@@ -529,37 +529,3 @@ thoitrangtre.event=(function($){
     }
 })($);
 thoitrangtre.event.init();
-
-
-// function check validate
-thoitrangtre.validate=(function($){
-
-    var init = function(){
-
-        check_validate();
-    };
-
-    var check_validate=function(e){
-
-        (function ($) {
-            $(document).ready(function(){
-
-                $("#comment_form").validate({
-
-                    messages: {
-                        fullname: "Please input name",
-                        email: "Please input email",
-                        company: "Please input company name",
-                        comment: "Please input comment"
-                    }
-
-                });
-            });
-        })(jQuery);
-    };
-
-    return {
-        init: init
-    }
-})($);
-thoitrangtre.validate.init();
